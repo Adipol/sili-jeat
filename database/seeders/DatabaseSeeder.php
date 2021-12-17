@@ -20,7 +20,7 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(PermissionSeeder::class);
         $this->call(RoleSeeder::class);
-        Entity::factory(3)->create();
+        $this->call(EntitySeeder::class);
         $this->call(UserSeeder::class);
         $this->call(DetailSeeder::class);
     }
