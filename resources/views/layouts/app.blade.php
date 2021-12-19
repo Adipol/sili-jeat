@@ -19,13 +19,12 @@
     <!-- Scripts -->
     <script src="{{ mix('js/app.js') }}" defer></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    {!! htmlScriptTagJsApi() !!}
 </head>
 
 <body class="font-sans antialiased">
     <x-jet-banner />
 
-    <div class="min-h-screen bg-gray-100 ">
+    <div class=" min-h-screen bg-gray-100">
         @livewire('navigation')
         <!-- Page Content -->
         <main>
