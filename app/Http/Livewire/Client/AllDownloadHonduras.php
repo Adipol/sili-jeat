@@ -76,7 +76,7 @@ class AllDownloadHonduras extends Component
     public function download_xlsx()
     {
         if ($this->download_all->link_xlsx) {
-            return Storage::disk('s3')->download($this->download_all->link_xlsx);
+            return Storage::download($this->download_all->link_xlsx);
             //return  response()->download(storage_path('app/public/' . $this->download_all->link_xlsx));
         } else {
         }
@@ -85,7 +85,7 @@ class AllDownloadHonduras extends Component
     public function download_csv()
     {
         if ($this->download_all->link_csv) {
-            return Storage::disk('s3')->download($this->download_all->link_csv);
+            return Storage::download($this->download_all->link_csv);
             //return  response()->download(storage_path('app/public/' . $this->download_all->link_csv));
         } else {
         }

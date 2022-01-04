@@ -27,7 +27,7 @@ class IncrementalDownload extends Component
         $import = Import::find($id);
         $this->import = $import;
         if ($this->import->link_xlsx) {
-            return Storage::disk('s3')->download($this->import->link_xlsx);
+            return Storage::download($this->import->link_xlsx);
             //return  response()->download(storage_path('app/public/' . $this->import->link_xlsx));
         } else {
         }
@@ -39,7 +39,7 @@ class IncrementalDownload extends Component
         $import = Import::find($id);
         $this->import = $import;
         if ($this->import->link_csv) {
-            return Storage::disk('s3')->download($this->import->link_csv);
+            return Storage::download($this->import->link_csv);
             //return  response()->download(storage_path('app/public/' . $this->import->link_csv));
         } else {
         }
