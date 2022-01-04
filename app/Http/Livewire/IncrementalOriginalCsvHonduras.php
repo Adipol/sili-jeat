@@ -53,8 +53,8 @@ class IncrementalOriginalCsvHonduras extends Component
     {
         //$this->validate();
         if ($this->file) {
-            Storage::disk('s3')->delete($this->control->link_csv);
-            $this->control->link_csv = $this->file->store('resources', 's3');
+            Storage::delete($this->control->link_csv);
+            $this->control->link_csv = $this->file->store('resources');
         }
         $this->control->save();
         $this->reset(['open', 'file']);
@@ -65,7 +65,7 @@ class IncrementalOriginalCsvHonduras extends Component
 
     public function download_csv()
     {
-        return Storage::disk('s3')->download($this->control->link_csv);
+        return Storage::download($this->control->link_csv);
         //return response()->download(storage_path('app/public/' . $this->control->link_csv));
     }
     public function render()

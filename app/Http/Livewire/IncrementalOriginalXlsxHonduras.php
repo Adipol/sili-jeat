@@ -52,8 +52,8 @@ class IncrementalOriginalXlsxHonduras extends Component
     {
         //$this->validate();
         if ($this->file) {
-            Storage::disk('s3')->delete($this->control->link_xlsx);
-            $this->control->link_xlsx = $this->file->store('resources', 's3');
+            Storage::delete($this->control->link_xlsx);
+            $this->control->link_xlsx = $this->file->store('resources');
         }
         $this->control->save();
         $this->reset(['open', 'file']);
@@ -64,7 +64,7 @@ class IncrementalOriginalXlsxHonduras extends Component
 
     public function download_xlsx()
     {
-        return Storage::disk('s3')->download($this->control->link_xlsx);
+        return Storage::download($this->control->link_xlsx);
         //return response()->download(storage_path('app/public/' . $this->control->link_xlsx));
     }
 
