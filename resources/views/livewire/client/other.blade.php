@@ -25,23 +25,41 @@
                              </tr>
                          </thead>
                          <tbody class="bg-white divide-y divide-gray-200">
-
                              <tr>
                                  <td class="px-6 py-4 text-sm text-gray-500 whitespace-nowrap">
-                                     {{ $others->lists }}
+
+                                     @if ($others)
+                                         {{ $others->lists }}
+                                     @else
+                                         Sin listas
+                                     @endif
                                  </td>
                                  <td class="px-6 py-4 text-sm text-gray-500 whitespace-nowrap">
-                                     <button class="mt-4 mr-2 btn btn-green" wire:click="download_lists"><i
-                                             class="fa fa-download"></i>
-                                     </button>
+                                     @if ($others)
+                                         <button class="mt-4 mr-2 btn btn-green" wire:click="download_lists"><i
+                                                 class="fa fa-download"></i>
+                                         </button>
+                                     @else
+                                         Sin descargas
+                                     @endif
+
                                  </td>
                                  <td class="px-6 py-4 text-sm text-gray-500 whitespace-nowrap">
-                                     {{ $others->others }}
+                                     @if ($others)
+                                         {{ $others->others }}
+                                     @else
+                                         Sin listas
+                                     @endif
                                  </td>
                                  <td class="px-6 py-4 text-sm text-gray-500 whitespace-nowrap">
-                                     <button class="mt-4 mr-2 btn btn-green" wire:click="download_others"><i
-                                             class="fa fa-download"></i>
-                                     </button>
+                                     @if ($others)
+                                         <button class="mt-4 mr-2 btn btn-green" wire:click="download_others"><i
+                                                 class="fa fa-download"></i>
+                                         </button>
+                                     @else
+                                         Sin descargas
+                                     @endif
+
                                  </td>
                              </tr>
 
