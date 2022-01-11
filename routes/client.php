@@ -18,7 +18,6 @@ Route::get('complete', [CompleteController::class, 'index'])->name('complete.ind
 
 Route::get('all/{id}', [AllController::class, 'show'])->name('all.show');
 
-
 //Honduras
 Route::get('incremental-honduras', [IncrementalHondurasController::class, 'index'])->name('incremental.honduras.index');
 

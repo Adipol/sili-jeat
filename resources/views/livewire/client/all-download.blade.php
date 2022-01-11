@@ -21,6 +21,7 @@
         <button class="mt-4 mr-2 btn btn-green" wire:click="download_csv"><i class="fa fa-download"></i> Descarga CSV
         </button>
     </div>
+
     <livewire:scripts />
     @livewireChartsScripts
 </div>

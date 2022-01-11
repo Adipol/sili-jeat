@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AllController;
 use App\Http\Controllers\AllHondurasController;
+use App\Http\Controllers\Supplier\OtherController;
 use App\Http\Controllers\Supplier\ImportController;
 use App\Http\Controllers\Supplier\ConsultController;
 use App\Http\Controllers\Supplier\IncrementalController;
@@ -21,6 +22,9 @@ Route::get('consults', [ConsultController::class, 'index'])->name('consults.inde
 Route::get('incremental', [IncrementalController::class, 'index'])->name('supplier.incremental.index');
 
 Route::get('all', [AllController::class, 'index'])->name('supplier.all.index');
+
+Route::get('other', [OtherController::class, 'index'])->name('supplier.other.index');
+
 
 //Para Honduras
 
