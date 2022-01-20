@@ -31,36 +31,55 @@
             <aside>
                 <h1 class="mb-4 text-lg font-bold">Importar Listas</h1>
                 <ul class="text-sm text-gray-600">
-                    <li
-                        class="pl-2 mb-1 leading-7 border-l-4 @routeIs('import.index')border-yellow-500 @else border-transparent @endif">
-                        <a href="{{ route('import.index') }}">Base de datos</a>
-                    </li>
 
-                    <li
-                        class="pl-2 mb-1 leading-7 border-l-4 @routeIs('import.honduras.index')border-yellow-500 @else border-transparent @endif">
-                        <a href="{{ route('import.honduras.index') }}">Base de datos (Honduras)</a>
-                    </li>
+                    @can('Importar bd')
+                        <li
+                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('import.index')border-yellow-500 @else border-transparent @endif">
+                            <a href="{{ route('import.index') }}">Base de datos</a>
+                        </li>
+                    @endcan
 
-                    <li
-                        class="pl-2 mb-1 leading-7 border-l-4 @routeIs('supplier.incremental.index')border-yellow-500 @else border-transparent @endif">
-                        <a href="{{ route('supplier.incremental.index') }}">Incremental</a>
-                    </li>
-                    <li
-                        class="pl-2 mb-1 leading-7 border-l-4 @routeIs('supplier.incremental.honduras.index')border-yellow-500 @else border-transparent @endif">
-                        <a href="{{ route('supplier.incremental.honduras.index') }}">Incremental (Honduras)</a>
-                    </li>
-                    <li
-                        class="pl-2 mb-1 leading-7 border-l-4 @routeIs('supplier.all.index')border-yellow-500 @else border-transparent @endif">
-                        <a href="{{ route('supplier.all.index') }}">Completa</a>
-                    </li>
-                    <li
-                        class="pl-2 mb-1 leading-7 border-l-4 @routeIs('supplier.honduras.all.index')border-yellow-500 @else border-transparent @endif">
-                        <a href="{{ route('supplier.honduras.all.index') }}">Completa (Honduras)</a>
-                    </li>
-                    <li
-                        class="pl-2 mb-1 leading-7 border-l-4  @routeIs('supplier.other.index')border-yellow-500 @else border-transparent @endif">
-                        <a href="{{ route('supplier.other.index') }}">Dividir listas</a>
-                    </li>
+                    @can('Importar bd honduras')
+                        <li
+                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('import.honduras.index')border-yellow-500 @else border-transparent @endif">
+                            <a href="{{ route('import.honduras.index') }}">Base de datos (Honduras)</a>
+                        </li>
+                    @endcan
+
+                    @can('Cargar incremental')
+                        <li
+                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('supplier.incremental.index')border-yellow-500 @else border-transparent @endif">
+                            <a href="{{ route('supplier.incremental.index') }}">Incremental</a>
+                        </li>
+                    @endcan
+
+                    @can('Cargar incremental honduras')
+                        <li
+                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('supplier.incremental.honduras.index')border-yellow-500 @else border-transparent @endif">
+                            <a href="{{ route('supplier.incremental.honduras.index') }}">Incremental (Honduras)</a>
+                        </li>
+                    @endcan
+
+                    @can('Cargar completa')
+                        <li
+                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('supplier.all.index')border-yellow-500 @else border-transparent @endif">
+                            <a href="{{ route('supplier.all.index') }}">Completa</a>
+                        </li>
+                    @endcan
+
+                    @can('Cargar completa honduras')
+                        <li
+                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('supplier.honduras.all.index')border-yellow-500 @else border-transparent @endif">
+                            <a href="{{ route('supplier.honduras.all.index') }}">Completa (Honduras)</a>
+                        </li>
+                    @endcan
+
+                    @can('Cargar otros')
+                        <li
+                            class="pl-2 mb-1 leading-7 border-l-4  @routeIs('supplier.other.index')border-yellow-500 @else border-transparent @endif">
+                            <a href="{{ route('supplier.other.index') }}">Dividir listas</a>
+                        </li>
+                    @endcan
                 </ul>
             </aside>
             <div class="col-span-4 card">

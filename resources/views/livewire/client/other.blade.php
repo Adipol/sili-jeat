@@ -36,9 +36,11 @@
                                  </td>
                                  <td class="px-6 py-4 text-sm text-gray-500 whitespace-nowrap">
                                      @if ($others)
-                                         <button class="mt-4 mr-2 btn btn-green" wire:click="download_lists"><i
-                                                 class="fa fa-download"></i>
-                                         </button>
+                                         @if ($others->link_lists)
+                                             <button class="mt-4 mr-2 btn btn-green" wire:click="download_lists"><i
+                                                     class="fa fa-download"></i>
+                                             </button>
+                                         @endif
                                      @else
                                          Sin descargas
                                      @endif
@@ -53,9 +55,11 @@
                                  </td>
                                  <td class="px-6 py-4 text-sm text-gray-500 whitespace-nowrap">
                                      @if ($others)
-                                         <button class="mt-4 mr-2 btn btn-green" wire:click="download_others"><i
-                                                 class="fa fa-download"></i>
-                                         </button>
+                                         @if ($others->link_others)
+                                             <button class="mt-4 mr-2 btn btn-green" wire:click="download_others"><i
+                                                     class="fa fa-download"></i>
+                                             </button>
+                                         @endif
                                      @else
                                          Sin descargas
                                      @endif
