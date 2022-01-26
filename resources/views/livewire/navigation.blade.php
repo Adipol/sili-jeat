@@ -66,6 +66,12 @@ $nav_links = [
                                     Información</a>
                             @endcan
 
+                            @can('Descargar listas honduras')
+                                <a href="{{ route('incremental.honduras.index') }}"
+                                    class="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-blue-700 hover:text-white">Descargar
+                                    Información (Honduras)</a>
+                            @endcan
+
                             @can('Cargar listas')
                                 <a href="{{ route('import.index') }}"
                                     class="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-blue-700 hover:text-white">Cargar
@@ -102,7 +108,7 @@ $nav_links = [
 
 
                         <div x-show="open" x-on:click.away="open=false"
-                            class=" z-20 absolute right-0 w-48 py-1 mt-2 origin-top-right bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                            class="absolute right-0 z-20 w-48 py-1 mt-2 origin-top-right bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
                             role="menu" aria-orientation="vertical" aria-labelledby="user-menu">
                             <a href="{{ route('profile.show') }}"
                                 class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Tu
@@ -119,7 +125,7 @@ $nav_links = [
                                 <a href="{{ route('logout') }}"
                                     class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem"
                                     onclick="event.preventDefault();
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        this.closest('form').submit();">Salir</a>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        this.closest('form').submit();">Salir</a>
                             </form>
                         </div>
                     </div>
@@ -156,6 +162,12 @@ $nav_links = [
                 <a href="{{ route('incremental.index') }}"
                     class="block px-3 py-2 text-base font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
                     aria-current="page">Descargar información</a>
+            @endcan
+
+            @can('Descargar listas honduras')
+                <a href="{{ route('incremental.honduras.index') }}"
+                    class="block px-3 py-2 text-base font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
+                    aria-current="page">Descargar información (Honduras)</a>
             @endcan
 
             @can('Cargar listas')
