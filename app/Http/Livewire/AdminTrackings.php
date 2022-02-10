@@ -10,6 +10,7 @@ use Carbon\Carbon;
 class AdminTrackings extends Component
 {
     use WithPagination;
+    protected $paginationTheme = "bootstrap";
     public $search;
 
     public function render()
@@ -20,7 +21,8 @@ class AdminTrackings extends Component
             ->select('users.name', 'users.email', 'devices.created_at', 'devices.updated_at', 'devices.device_type', 'devices.ip')
             ->Where('users.name', 'like', '%' . $this->search . '%')
             ->orWhere('users.email', 'like', '%' . $this->search . '%')
-            ->paginate(10);
+            ->orderByDesc('devices.updated_at')
+            ->paginate(20);
 
         return view('livewire.admin-trackings', compact('devices'));
     }

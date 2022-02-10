@@ -14,14 +14,6 @@
                                      class="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase">
                                      Descarga
                                  </th>
-                                 <th scope="col"
-                                     class="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase">
-                                     Listas
-                                 </th>
-                                 <th scope="col"
-                                     class="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase">
-                                     Descarga
-                                 </th>
                              </tr>
                          </thead>
                          <tbody class="bg-white divide-y divide-gray-200">
@@ -46,6 +38,8 @@
                                      @endif
 
                                  </td>
+                             </tr>
+                             <tr>
                                  <td class="px-6 py-4 text-sm text-gray-500 whitespace-nowrap">
                                      @if ($others)
                                          {{ $others->others }}
@@ -66,7 +60,6 @@
 
                                  </td>
                              </tr>
-
                          </tbody>
                      </table>
                  </div>

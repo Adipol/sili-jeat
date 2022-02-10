@@ -17,7 +17,8 @@ class CompleteController extends Controller
     {
         $complete = whole::all()->first();
         $lists = Control::count('id');
+        $codes = DB::table('controls')->select(DB::raw('count(*) as code_count, code'))->groupBy('code')->get();
 
-        return view('client.complete', compact('complete', 'lists'));
+        return view('client.complete', compact('complete', 'lists', 'codes'));
     }
 }

@@ -1,7 +1,7 @@
 <div>
     <article class="mt-4 card">
         <div class="card-body">
-            <header><i class="text-blue-500 fas fa-chart-pie"></i> Cantidad por tipo</header>
+            <header><i class="text-blue-500 fas fa-chart-pie"></i> Cantidad por código</header>
         </div>
         <div class="flex flex-col space-y-2 sm:flex-row sm:space-y-0 sm:space-x-4">
             <div class="flex-1 p-4 bg-white border rounded shadow" style="height: 30rem;">

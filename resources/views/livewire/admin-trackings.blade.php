@@ -34,6 +34,8 @@
                 </tbody>
             </table>
         </div>
-
+        <div class="card-footer">
+            {{ $devices->links() }}
+        </div>
     </div>
 </div>

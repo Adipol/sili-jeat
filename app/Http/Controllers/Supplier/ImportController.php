@@ -19,7 +19,7 @@ class ImportController extends Controller
     {
         $amount = Control::count();
         $details = Detail::select('id', 'name')->orderBy('name', 'asc')->get();
-        $expenses = Expense::orderBy('id', 'desc')->get();
+        $expenses = Expense::orderBy('id', 'desc')->take(5)->get();
 
         return view('supplier.import', compact('amount', 'details', 'expenses'));
     }

@@ -29,7 +29,7 @@ class Incremental extends Component
 
     public function render()
     {
-        $controls = Import::all();
+        $controls = Import::orderBy('id', 'desc')->take(5)->get();
 
         return view('livewire.incremental', compact('controls'));
     }

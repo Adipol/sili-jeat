@@ -48,7 +48,7 @@ class AllDownloadHonduras extends Component
                     return $columnChartModel->addColumn($type, $value, $this->colors[$type]);
                 },
                 (new ColumnChartModel())
-                    ->setTitle('Cantidad por tipo')
+                    ->setTitle('Cantidad por código')
                     ->setAnimated($this->firstRun)
                     ->withOnColumnClickEventName('onColumnClick')
             );
@@ -60,7 +60,7 @@ class AllDownloadHonduras extends Component
                     return $pieChartModel->addSlice($type, $value, $this->colors[$type]);
                 },
                 (new PieChartModel())
-                    ->setTitle('Cantidad por tipo')
+                    ->setTitle('Cantidad por código')
                     ->setAnimated($this->firstRun)
                     ->withOnSliceClickEvent('onSliceClick')
             );

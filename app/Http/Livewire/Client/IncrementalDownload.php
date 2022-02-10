@@ -17,7 +17,7 @@ class IncrementalDownload extends Component
 
     public function render()
     {
-        $imports = Import::orderBy('id', 'desc')->get();
+        $imports = Import::orderBy('id', 'desc')->take(5)->get();
 
         return view('livewire.client.incremental-download', compact('imports'));
     }

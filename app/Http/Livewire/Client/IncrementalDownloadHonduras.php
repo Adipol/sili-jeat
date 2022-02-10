@@ -17,7 +17,7 @@ class IncrementalDownloadHonduras extends Component
 
     public function render()
     {
-        $imports = HondurasImport::orderBy('id', 'desc')->get();
+        $imports = HondurasImport::orderBy('id', 'desc')->take(5)->get();
 
         return view('livewire.client.incremental-download-honduras', compact('imports'));
     }
