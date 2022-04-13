@@ -3,7 +3,7 @@
         <div class="text-sm card-body bh-gray-100">
             <header class="flex items-center justify-between">
                 <h1> <i class="far fa-calendar-alt"></i>
-                    <strong>AMLC</strong> Lista incremental (Honduras)
+                    <strong>AMLC</strong> Lista incremental
                 </h1>
             </header>
 
@@ -218,8 +218,7 @@
                                 Observaciones
                             </label>
                             <div class="mt-1">
-                                <textarea id="description_one" name="description_one" rows="2"
-                                    wire:model="description_one"
+                                <textarea id="description_one" name="description_one" rows="2" wire:model="description_one"
                                     class="block w-full mt-1 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"></textarea>
                             </div>
                         </div>

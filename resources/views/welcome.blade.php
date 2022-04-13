@@ -48,61 +48,25 @@
     </div>
     <footer class="text-gray-600 body-font">
         <div
-            class="
-      container
-      px-5
-      py-24
-      mx-auto
-      flex
-      md:items-center
-      lg:items-start
-      md:flex-row md:flex-nowrap
-      flex-wrap flex-col
-    ">
-            <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
-                <p
-                    class="
-          flex
-          title-font
-          font-medium
-          items-center
-          md:justify-start
-          justify-center
-          text-gray-900
-        ">
+            class="container flex flex-col flex-wrap px-5 py-24 mx-auto  md:items-center lg:items-start md:flex-row md:flex-nowrap">
+            <div class="flex-shrink-0 w-64 mx-auto text-center md:mx-0 md:text-left">
+                <p class="flex items-center justify-center font-medium text-gray-900  title-font md:justify-start">
                     <span class="ml-3 text-xl"> <img class="hidden w-auto h-8 lg:block"
                             src="{{ asset('img/home/logo.png') }}" alt="Workflow"></span>
                 </p>
-                <p class="mt-2 text-sm text-gray-500 text-justify ">
+                <p class="mt-2 text-sm text-justify text-gray-500 ">
                     Grupo AMLC es una empresa orientada a brindar servicios de excelencia y a medida de las necesidades
                     del cliente.
                 </p>
             </div>
-            <div
-                class="
-        flex-grow flex flex-wrap
-        md:pl-20
-        -mb-10
-        md:mt-0
-        mt-10
-        md:text-left
-        text-center
-      ">
-                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-                    <h2
-                        class="
-            title-font
-            font-medium
-            text-gray-900
-            tracking-widest
-            text-sm
-            mb-3
-          ">
+            <div class="flex flex-wrap flex-grow mt-10 -mb-10 text-center  md:pl-20 md:mt-0 md:text-left">
+                <div class="w-full px-4 lg:w-1/4 md:w-1/2">
+                    <h2 class="mb-3 text-sm font-medium tracking-widest text-gray-900  title-font">
                         Dirección
                     </h2>
-                    <nav class="list-none mb-10">
+                    <nav class="mb-10 list-none">
                         <li>
-                            <p class="text-gray-600 hover:text-gray-800 text-justify ">Av. Hernando Siles N°
+                            <p class="text-justify text-gray-600 hover:text-gray-800 ">Av. Hernando Siles N°
                                 420
                                 esquina calle 3, zona Obrajes, Edificio Torre Titanium I Piso 4 of.401 </p>
                         </li>
@@ -113,11 +77,11 @@
                     </nav>
                 </div>
 
-                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-                    <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
+                <div class="w-full px-4 lg:w-1/4 md:w-1/2">
+                    <h2 class="mb-3 text-sm font-medium tracking-widest text-gray-900 title-font">
                         Tefefono(s)
                     </h2>
-                    <nav class="list-none mb-10">
+                    <nav class="mb-10 list-none">
                         <li>
                             <p class="text-gray-600 hover:text-gray-800">(591) 2-2780233</p>
                         </li>
@@ -130,19 +94,11 @@
                     </nav>
                 </div>
 
-                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-                    <h2
-                        class="
-            title-font
-            font-medium
-            text-gray-900
-            tracking-widest
-            text-sm
-            mb-3
-          ">
+                <div class="w-full px-4 lg:w-1/4 md:w-1/2">
+                    <h2 class="mb-3 text-sm font-medium tracking-widest text-gray-900  title-font">
                         Correo(s)
                     </h2>
-                    <nav class="list-none mb-10">
+                    <nav class="mb-10 list-none">
                         <li>
                             <a href="mailto:franco.rojas@grupoamlc.org"
                                 class="text-gray-600 hover:text-gray-800">franco.rojas@grupoamlc.org</a>
@@ -157,29 +113,14 @@
             </div>
         </div>
         <div class="bg-gray-100">
-            <div
-                class="
-        container
-        mx-auto
-        py-4
-        px-5
-        flex flex-wrap flex-col
-        sm:flex-row
-      ">
-                <p class="text-gray-500 text-sm text-center sm:text-left">
+            <div class="container flex flex-col flex-wrap px-5 py-4 mx-auto  sm:flex-row">
+                <p class="text-sm text-center text-gray-500 sm:text-left">
                     © 2021 Copyright:
-                    <a href="mailto:jorge.aguilar@grupoamlc.org" class="text-gray-600 ml-1" target="_blank">Powered by
+                    <a href="mailto:jorge.aguilar@grupoamlc.org" class="ml-1 text-gray-600" target="_blank">Powered by
                         AMLC
                     </a>
                 </p>
-                <span
-                    class="
-          inline-flex
-          sm:ml-auto sm:mt-0
-          mt-2
-          justify-center
-          sm:justify-start
-        ">
+                <span class="inline-flex justify-center mt-2  sm:ml-auto sm:mt-0 sm:justify-start">
                 </span>
             </div>
         </div>

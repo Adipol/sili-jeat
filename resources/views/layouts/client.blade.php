@@ -35,29 +35,55 @@
 
                     @can('Descargar incremental')
                         <li
-                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('incremental.index')border-yellow-500 @else border-transparent @endif">
+                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('incremental.index')border-yellow-500
+@else
+border-transparent @endif">
                             <a href="{{ route('incremental.index') }}">Incremental</a>
                         </li>
                     @endcan
 
                     @can('Descargar incremental honduras')
                         <li
-                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('incremental.honduras.index')border-yellow-500 @else border-transparent @endif">
+                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('incremental.honduras.index')border-yellow-500
+@else
+border-transparent @endif">
                             <a href="{{ route('incremental.honduras.index') }}">Incremental (Honduras)</a>
+                        </li>
+                    @endcan
+
+                    @can('Descargar incremental el salvador')
+                        <li
+                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('incremental.salvador.index')border-yellow-500
+@else
+border-transparent @endif">
+                            <a href="{{ route('incremental.salvador.index') }}">Incremental (El salvador)</a>
                         </li>
                     @endcan
 
                     @can('Descargar completa')
                         <li
-                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('complete.index')border-yellow-500 @else border-transparent @endif">
+                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('complete.index')border-yellow-500
+@else
+border-transparent @endif">
                             <a href="{{ route('complete.index') }}">Completa</a>
                         </li>
                     @endcan
 
                     @can('Descargar completa honduras')
                         <li
-                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('complete.honduras.index')border-yellow-500 @else border-transparent @endif">
+                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('complete.honduras.index')border-yellow-500
+@else
+border-transparent @endif">
                             <a href="{{ route('complete.honduras.index') }}">Completa (Honduras)</a>
+                        </li>
+                    @endcan
+
+                    @can('Descargar completa el salvador')
+                        <li
+                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('complete.salvador.index')border-yellow-500
+@else
+border-transparent @endif">
+                            <a href="{{ route('complete.salvador.index') }}">Completa (El salvador)</a>
                         </li>
                     @endcan
 

@@ -1,19 +1,8 @@
 <x-app-layout>
     <div class="px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
-        <nav class="
-    block
-    text-sm text-left text-gray-600
-    bg-gray-500 bg-opacity-10
-    border border-gray-400
-    h-12
-    flex
-    items-center
-    p-4
-    rounded-md
-    mb-6
-  "
+        <nav class="flex items-center block h-12 p-4 mb-6 text-sm text-left text-gray-600 bg-gray-500 border border-gray-400 rounded-md bg-opacity-10"
             role="alert">
-            <ol class="list-reset flex text-grey-dark">
+            <ol class="flex list-reset text-grey-dark">
                 <li><a href="/" class="font-bold"><i class="fas fa-home"></i></a></li>
                 <li><span class="mx-2">/</span></li>
                 <li><a href="{{ route('consults.index') }}" class="font-bold">Consultas</a></li>
@@ -63,6 +52,14 @@
                         </dt>
                         <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
                             {{ $pep->last_name_two }}
+                        </dd>
+                    </div>
+                    <div class="px-4 py-5 bg-white sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                        <dt class="text-sm font-medium text-gray-500">
+                            País
+                        </dt>
+                        <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                            {{ $pep->country }}
                         </dd>
                     </div>
                     <div class="px-4 py-5 bg-gray-50 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">

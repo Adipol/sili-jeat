@@ -1,4 +1,4 @@
-<x-client-layout x-data="{open:false}" class="mt-2">
+<x-client-layout x-data="{ open: false }" class="mt-2">
 
     <h1 class="text-2xl font-bold">Información de la lista incremental</h1>
     <hr class="mt-2 mb-6 border-2 border-yellow-500">

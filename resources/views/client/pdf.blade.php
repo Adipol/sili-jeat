@@ -235,6 +235,10 @@
                                 <td><input type="text" name="" value="{{ $pep->extension }}"></input></td>
                             </tr>
                             <tr>
+                                <td><label>País: </label></td>
+                                <td><input type="text" name="" value="{{ $pep->country }}"></input></td>
+                            </tr>
+                            <tr>
                                 <td><label>Tipo de Lista: </label> </td>
                                 <td><input type="text" name="" value="{{ $pep->code }}"></input></td>
                             </tr>
@@ -252,7 +256,8 @@
                             </tr>
                             <tr>
                                 <td><label>Justificacion: </label></td>
-                                <td><textarea type="text" name="" rows="5">{{ $pep->justification }}</textarea>
+                                <td>
+                                    <textarea type="text" name="" rows="5">{{ $pep->justification }}</textarea>
                                 </td>
                             </tr>
                         </table>

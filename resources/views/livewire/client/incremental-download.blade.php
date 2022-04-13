@@ -1,4 +1,4 @@
-<div x-data="{open:false}">
+<div x-data="{ open: false }">
     @foreach ($imports as $import)
         <article class="mb-6 card">
             <div class="card-body bh-gray-100">
@@ -71,7 +71,7 @@
                                 <label for="first-name" class="block text-sm font-medium text-gray-700">Actualización
                                     GAFI</label>
                                 <input type="text" name="update_gafi" id="first-name" autocomplete="given-name" readonly
-                                    value="{{ $import->gafi_updrade }}"
+                                    value="{{ $import->gafi_upgrade }}"
                                     class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                             </div>
                             <div class="col-span-6 sm:col-span-3">

@@ -17,18 +17,18 @@ class AllDownload extends Component
 
     public $code = ['ASO-PEP', 'FBI', 'F-PEP', 'GAFI', 'INTERPOL', 'OFAC', 'ONU', 'OPI', 'PEP-EX', 'PEP-NAL', 'PEPU-EX', 'PEPU-NAL', 'UE'];
     public $colors = [
-        'ASO-PEP' => '#f6ad55',
-        'FBI' => '#fc8181',
-        'F-PEP' => '#90cdf4',
-        'GAFI' => '#66DA26',
-        'INTERPOL' => '#cbd5e0',
-        'OFAC' => '#f490b1',
-        'ONU' => '#bdf490',
-        'OPI' => '#f49890',
-        'PEP-EX' => '#70423e61',
-        'PEP-NAL' => '#3e706961',
-        'PEPU-EX' => '#703e6e61',
-        'PEPU-NAL' => '#911d0861',
+        'ASO-PEP' => '#6a5bcdb8',
+        'FBI' => '#708090',
+        'F-PEP' => '#ff8c00c7',
+        'GAFI' => '#32cd32',
+        'INTERPOL' => '#0000cc',
+        'OFAC' => '#f00',
+        'ONU' => '#40e0d0',
+        'OPI' => '#6a5bcdb8',
+        'PEP-EX' => '#ff4500',
+        'PEP-NAL' => '#006400',
+        'PEPU-EX' => '#ff1493',
+        'PEPU-NAL' => '#f0f',
         'UE' => '#07288d61',
     ];
 

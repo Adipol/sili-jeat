@@ -168,7 +168,7 @@
                                     wire:model="update_pep_nal"
                                     class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                             </div>
-                            <div class="col-span-6 sm:col-span-3">
+                            {{-- <div class="col-span-6 sm:col-span-3">
                                 <label for="new_pepu_ex" class="block text-sm font-medium text-gray-700">Nuevo
                                     PEPU-EX</label>
                                 <input type="number" name="new_pepu_ex" id="new_pepu_ex" autocomplete="given-name"
@@ -197,7 +197,7 @@
                                 <input type="number" name="update_pepu_nal" id="update_pepu_nal"
                                     autocomplete="given-name" wire:model="update_pepu_nal"
                                     class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
-                            </div>
+                            </div> --}}
                             <div class="col-span-6 sm:col-span-3">
                                 <label for="new_ue" class="block text-sm font-medium text-gray-700">Nuevo
                                     UE</label>
@@ -218,8 +218,7 @@
                                 Observaciones
                             </label>
                             <div class="mt-1">
-                                <textarea id="description_one" name="description_one" rows="2"
-                                    wire:model="description_one"
+                                <textarea id="description_one" name="description_one" rows="2" wire:model="description_one"
                                     class="block w-full mt-1 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"></textarea>
                             </div>
                         </div>

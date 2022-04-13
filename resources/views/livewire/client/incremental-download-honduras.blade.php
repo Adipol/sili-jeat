@@ -1,4 +1,4 @@
-<div x-data="{open:false}">
+<div x-data="{ open: false }">
     @foreach ($imports as $import)
         <article class="mb-6 card">
             <div class="card-body bh-gray-100">
@@ -71,7 +71,7 @@
                                 <label for="first-name" class="block text-sm font-medium text-gray-700">Actualización
                                     GAFI</label>
                                 <input type="text" name="update_gafi" id="first-name" autocomplete="given-name" readonly
-                                    value="{{ $import->gafi_updrade }}"
+                                    value="{{ $import->gafi_upgrade }}"
                                     class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                             </div>
                             <div class="col-span-6 sm:col-span-3">
@@ -159,7 +159,7 @@
                                     readonly value="{{ $import->pep_nal_upgrade }}"
                                     class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                             </div>
-                            <div class="col-span-6 sm:col-span-3">
+                            {{-- <div class="col-span-6 sm:col-span-3">
                                 <label for="new_pepu_ex" class="block text-sm font-medium text-gray-700">Nuevo
                                     PEPU-EX</label>
                                 <input type="text" name="new_pepu_ex" id="new_pepu_ex" autocomplete="given-name"
@@ -188,7 +188,7 @@
                                 <input type="text" name="update_pepu_nal" id="update_pepu_nal" autocomplete="given-name"
                                     readonly value="{{ $import->pepu_nal_upgrade }}"
                                     class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
-                            </div>
+                            </div> --}}
                             <div class="col-span-6 sm:col-span-3">
                                 <label for="new_ue" class="block text-sm font-medium text-gray-700">Nuevo
                                     UE</label>

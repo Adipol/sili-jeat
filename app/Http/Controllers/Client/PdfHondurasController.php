@@ -17,7 +17,7 @@ class PdfHondurasController extends Controller
 
         $pdf = PDF::loadView('client.honduras-pdf', compact('pep', 'date'));
 
-        return $pdf->stream('AMLC_Pep_h.pdf');
+        return $pdf->download('AMLC_Pep_h.pdf');
     }
 
     public function getAllpep($id)

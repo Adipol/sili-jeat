@@ -34,49 +34,90 @@
 
                     @can('Importar bd')
                         <li
-                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('import.index')border-yellow-500 @else border-transparent @endif">
+                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('import.index')border-yellow-500
+@else
+border-transparent @endif">
                             <a href="{{ route('import.index') }}">Base de datos</a>
                         </li>
                     @endcan
 
                     @can('Importar bd honduras')
                         <li
-                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('import.honduras.index')border-yellow-500 @else border-transparent @endif">
+                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('import.honduras.index')border-yellow-500
+@else
+border-transparent @endif">
                             <a href="{{ route('import.honduras.index') }}">Base de datos (Honduras)</a>
+                        </li>
+                    @endcan
+
+                    @can('Importar bd el salvador')
+                        <li
+                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('import.salvador.index')border-yellow-500
+@else
+border-transparent @endif">
+                            <a href="{{ route('import.salvador.index') }}">Base de datos (El salvador)</a>
                         </li>
                     @endcan
 
                     @can('Cargar incremental')
                         <li
-                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('supplier.incremental.index')border-yellow-500 @else border-transparent @endif">
+                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('supplier.incremental.index')border-yellow-500
+@else
+border-transparent @endif">
                             <a href="{{ route('supplier.incremental.index') }}">Incremental</a>
                         </li>
                     @endcan
 
                     @can('Cargar incremental honduras')
                         <li
-                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('supplier.incremental.honduras.index')border-yellow-500 @else border-transparent @endif">
+                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('supplier.incremental.honduras.index')border-yellow-500
+@else
+border-transparent @endif">
                             <a href="{{ route('supplier.incremental.honduras.index') }}">Incremental (Honduras)</a>
+                        </li>
+                    @endcan
+
+                    @can('Cargar incremental el salvador')
+                        <li
+                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('supplier.incremental.salvador.index')border-yellow-500
+@else
+border-transparent @endif">
+                            <a href="{{ route('supplier.incremental.salvador.index') }}">Incremental (El salvador)</a>
                         </li>
                     @endcan
 
                     @can('Cargar completa')
                         <li
-                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('supplier.all.index')border-yellow-500 @else border-transparent @endif">
+                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('supplier.all.index')border-yellow-500
+@else
+border-transparent @endif">
                             <a href="{{ route('supplier.all.index') }}">Completa</a>
                         </li>
                     @endcan
 
                     @can('Cargar completa honduras')
                         <li
-                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('supplier.honduras.all.index')border-yellow-500 @else border-transparent @endif">
+                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('supplier.honduras.all.index')border-yellow-500
+@else
+border-transparent @endif">
                             <a href="{{ route('supplier.honduras.all.index') }}">Completa (Honduras)</a>
+                        </li>
+                    @endcan
+
+                    @can('Cargar completa el salvador')
+                        <li
+                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('supplier.salvador.all.index')border-yellow-500
+@else
+border-transparent @endif">
+                            <a href="{{ route('supplier.salvador.all.index') }}">Completa (El salvador)</a>
                         </li>
                     @endcan
 
                     @can('Cargar otros')
                         <li
-                            class="pl-2 mb-1 leading-7 border-l-4  @routeIs('supplier.other.index')border-yellow-500 @else border-transparent @endif">
+                            class="pl-2 mb-1 leading-7 border-l-4  @routeIs('supplier.other.index')border-yellow-500
+@else
+border-transparent @endif">
                             <a href="{{ route('supplier.other.index') }}">Dividir listas</a>
                         </li>
                     @endcan

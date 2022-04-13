@@ -17,7 +17,7 @@ class PdfController extends Controller
 
         $pdf = PDF::loadView('client.pdf', compact('pep', 'date'));
 
-        return $pdf->stream('AMLC_Pep.pdf');
+        return $pdf->download('AMLC_Pep.pdf');
     }
 
     public function getAllpep($id)

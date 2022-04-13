@@ -244,6 +244,10 @@
                                 <td> <input type="text" name="" value="{{ $pep->last_name_two }}"></input></td>
                             </tr>
                             <tr>
+                                <td><label>País: </label></td>
+                                <td><input type="text" name="" value="{{ $pep->country }}"></input></td>
+                            </tr>
+                            <tr>
                                 <td><label>Cargo: </label></td>
                                 <td><input type="text" name="" value="{{ $pep->position }}"></input></td>
                             </tr>
@@ -284,7 +288,7 @@
                                         Documento
                                     </th>
                                     <th>
-                                        Numero
+                                        Número
                                     </th>
                                     <th>
                                         Extensión

@@ -15,7 +15,7 @@ $nav_links = [
 ];
 @endphp
 
-<nav class="bg-blue-900 " x-data="{open:false}">
+<nav class="bg-blue-900 " x-data="{ open: false }">
     <div class="px-2 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div class="relative flex items-center justify-between h-16">
 
@@ -56,8 +56,14 @@ $nav_links = [
                             @can('Buscar honduras')
                                 <a href="{{ route('consults.honduras.index') }}"
                                     class="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-blue-700 hover:text-white">Consultas
-                                    (Honduras)</a>
+                                    (Honduras)
+                                </a>
                             @endcan
+
+
+                            <a href="{{ route('consults.salvador.index') }}"
+                                class="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-blue-700 hover:text-white">Consultas
+                                (El salvador)</a>
 
 
                             @can('Descargar listas')
@@ -70,6 +76,12 @@ $nav_links = [
                                 <a href="{{ route('incremental.honduras.index') }}"
                                     class="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-blue-700 hover:text-white">Descargar
                                     Información (Honduras)</a>
+                            @endcan
+
+                            @can('Descargar listas el salvador')
+                                <a href="{{ route('incremental.salvador.index') }}"
+                                    class="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-blue-700 hover:text-white">Descargar
+                                    Información (El salvador)</a>
                             @endcan
 
                             @can('Cargar listas')
@@ -97,7 +109,7 @@ $nav_links = [
                     </button>
 
                     <!-- Profile dropdown -->
-                    <div class="relative inline ml-3 display:inline" x-data="{open: false}">
+                    <div class="relative inline ml-3 display:inline" x-data="{ open: false }">
 
                         <button x-on:click=" open=true " type="button"
                             class="z-0 flex text-sm bg-gray-800 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
@@ -125,7 +137,7 @@ $nav_links = [
                                 <a href="{{ route('logout') }}"
                                     class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem"
                                     onclick="event.preventDefault();
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        this.closest('form').submit();">Salir</a>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        this.closest('form').submit();">Salir</a>
                             </form>
                         </div>
                     </div>
@@ -158,6 +170,11 @@ $nav_links = [
             @endcan
 
 
+            <a href="{{ route('consults.salvador.index') }}"
+                class="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-blue-700 hover:text-white">Consultas
+                (El salvador)</a>
+
+
             @can('Descargar listas')
                 <a href="{{ route('incremental.index') }}"
                     class="block px-3 py-2 text-base font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
@@ -168,6 +185,12 @@ $nav_links = [
                 <a href="{{ route('incremental.honduras.index') }}"
                     class="block px-3 py-2 text-base font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
                     aria-current="page">Descargar información (Honduras)</a>
+            @endcan
+
+            @can('Descargar listas el salvador')
+                <a href="{{ route('incremental.salvador.index') }}"
+                    class="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-blue-700 hover:text-white">Descargar
+                    Información (El salvador)</a>
             @endcan
 
             @can('Cargar listas')

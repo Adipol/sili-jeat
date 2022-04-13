@@ -3,13 +3,17 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AllController;
 use App\Http\Controllers\AllHondurasController;
+use App\Http\Controllers\AllSalvadorController;
 use App\Http\Controllers\Supplier\OtherController;
 use App\Http\Controllers\Supplier\ImportController;
 use App\Http\Controllers\Supplier\ConsultController;
 use App\Http\Controllers\Supplier\IncrementalController;
 use App\Http\Controllers\Supplier\ImportHondurasController;
+use App\Http\Controllers\Supplier\ImportSalvadorController;
 use App\Http\Controllers\Supplier\ConsultHondurasController;
+use App\Http\Controllers\Supplier\ConsultSalvadorController;
 use App\Http\Controllers\Supplier\IncrementalHondurasController;
+use App\Http\Controllers\Supplier\IncrementalSalvadorController;
 
 
 
@@ -37,3 +41,15 @@ Route::get('incremental-honduras', [IncrementalHondurasController::class, 'index
 Route::get('honduras-all', [AllHondurasController::class, 'index'])->middleware('can:Cargar completa honduras')->name('supplier.honduras.all.index');
 
 Route::get('consults-honduras', [ConsultHondurasController::class, 'index'])->name('consults.honduras.index');
+
+//Para El salvador
+
+Route::get('import-salvador', [ImportSalvadorController::class, 'index'])->middleware('can:Importar bd el salvador')->name('import.salvador.index');
+
+Route::post('importSalvadorExcel', [ImportSalvadorController::class, 'importExcel'])->name('importExcel.salvador');
+
+Route::get('incremental-salvador', [IncrementalSalvadorController::class, 'index'])->middleware('can:Cargar incremental el salvador')->name('supplier.incremental.salvador.index');
+
+Route::get('salvador-all', [AllSalvadorController::class, 'index'])->middleware('can:Cargar completa el salvador')->name('supplier.salvador.all.index');
+
+Route::get('consults-salvador', [ConsultSalvadorController::class, 'index'])->name('consults.salvador.index');
