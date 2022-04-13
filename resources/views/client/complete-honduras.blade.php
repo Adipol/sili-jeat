@@ -16,15 +16,9 @@
                 <h1> <i class="far fa-calendar-alt"></i>
                     <strong>Fecha de carga: </strong>
                     @if ($complete)
-                        {{ $complete->updated_at->isoFormat('ll') }}
+                        {{ $complete->date->isoFormat('ll') }}
                     @endif
                 </h1>
-                <div>
-                    <strong>Actualizado: </strong>
-                    @if ($complete)
-                        {{ $complete->updated_at->diffForHumans() }}
-                    @endif
-                </div>
             </header>
 
             <div>
