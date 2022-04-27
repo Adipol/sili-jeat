@@ -26,6 +26,9 @@ class ShowConsultHonduras extends Component
             ->orderBy($this->sort, $this->direction)
             ->paginate(10);
 
+        session(['value1h' => $this->search]);
+        session(['value2h' => $this->search1]);
+
         return view('livewire.show-consult-honduras', compact('peps'));
     }
 

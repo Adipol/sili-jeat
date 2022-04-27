@@ -108,7 +108,6 @@
                             {{ $pep->management }}
                         </td>
                         <td title="Detalle de la persona" style="width:5%">
-
                             @livewire('show-pep',['pep' => $pep], key('consul-profile-one-'.$pep->id_register))
                         </td>
                         <td style="width:5%" title="Imprimir detalle">
@@ -125,7 +124,10 @@
         </table>
     @else
         <div class="px-6 py-4 text-center">
-            No existe ningún registro que coincida
+            <p class="px-6 py-4">No existe ningún registro que coincida</p>
+            <a class="btn btn-red" href="{{ route('download-pdf-null') }}">
+                Imprimir detalle
+            </a>
         </div>
     @endif
 

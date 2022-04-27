@@ -3,9 +3,13 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Client\PdfController;
+use App\Http\Controllers\Client\PdfNullController;
+use App\Http\Controllers\Supplier\ConsultController;
 use App\Http\Controllers\Client\AllegadoPdfController;
 use App\Http\Controllers\Client\PdfHondurasController;
 use App\Http\Controllers\Client\PdfSalvadorController;
+use App\Http\Controllers\Supplier\ConsultHondurasController;
+use App\Http\Controllers\Supplier\ConsultSalvadorController;
 use App\Http\Controllers\Client\AllegadoPdfHondurasController;
 use App\Http\Controllers\Client\AllegadoPdfSalvadorController;
 
@@ -32,3 +36,9 @@ Route::get('/allegado-pdf-honduras/{id}', [AllegadoPdfHondurasController::class,
 Route::get('/allegado-pdf-salvador/{id}', [AllegadoPdfSalvadorController::class, 'downloadPDF'])->name('allegado-pdf-honduras');
 
 Route::get('/get-all-pep/{id}', [PdfController::class, 'getAllpep'])->name('get-all-pep');
+
+Route::get('/download-pdf-null', [ConsultController::class, 'downloadPDFNull'])->name('download-pdf-null');
+
+Route::get('/download-pdf-null-honduras', [ConsultHondurasController::class, 'downloadPDFNull'])->name('download-pdf-null-honduras');
+
+Route::get('/download-pdf-null-salvador', [ConsultSalvadorController::class, 'downloadPDFNull'])->name('download-pdf-null-salvador');

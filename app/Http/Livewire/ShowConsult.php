@@ -3,9 +3,11 @@
 namespace App\Http\Livewire;
 
 use App\Models\Control;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
 use Livewire\Component;
 use Livewire\WithPagination;
+use Barryvdh\DomPDF\Facade as PDF;
 
 class ShowConsult extends Component
 {
@@ -25,6 +27,9 @@ class ShowConsult extends Component
             ->orWhere('nro_document', $this->search)
             ->orderBy($this->sort, $this->direction)
             ->paginate(10);
+
+        session(['value1' => $this->search]);
+        session(['value2' => $this->search1]);
 
         return view('livewire.show-consult', compact('peps'));
     }

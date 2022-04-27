@@ -26,6 +26,9 @@ class ShowConsultSalvador extends Component
             ->orderBy($this->sort, $this->direction)
             ->paginate(10);
 
+        session(['value1s' => $this->search]);
+        session(['value2s' => $this->search1]);
+
         return view('livewire.show-consult-salvador', compact('peps'));
     }
 

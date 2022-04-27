@@ -124,7 +124,10 @@
         </table>
     @else
         <div class="px-6 py-4 text-center">
-            No existe ningún registro que coincida
+            <p class="px-6 py-4">No existe ningún registro que coincida</p>
+            <a class="btn btn-red" href="{{ route('download-pdf-null-honduras') }}">
+                Imprimir detalle
+            </a>
         </div>
     @endif
 
