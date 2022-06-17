@@ -212,6 +212,22 @@
                                     wire:model="update_ue"
                                     class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                             </div>
+
+                            <div class="col-span-6 sm:col-span-3">
+                                <label for="new_ue" class="block text-sm font-medium text-gray-700">Nuevo
+                                    PF-UE</label>
+                                <input type="number" name="new_pf_ue" id="new_pf_ue" autocomplete="given-name"
+                                    wire:model="new_pf_ue"
+                                    class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                            </div>
+                            <div class="col-span-6 sm:col-span-3">
+                                <label for="update_pf_ue" class="block text-sm font-medium text-gray-700">Actualización
+                                    PF-UE</label>
+                                <input type="number" name="update_pf_ue" id="update_pf_ue" autocomplete="given-name" r
+                                    wire:model="update_pf_ue"
+                                    class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                            </div>
+
                         </div>
                         <div class="col-span-6 mt-5">
                             <label for="about" class="block text-sm font-medium text-gray-700">
@@ -291,7 +307,7 @@
                                             @livewire('incremental-original-xlsx',['control'=>$control],key('control-profile-one-'.$control->id))
                                         </td> --}}
                                         <td class="px-6 py-4 text-sm text-gray-500 whitespace-nowrap">
-                                            @livewire('incremental-original-csv',['control'=>$control],key('contro-profile-two-'.$control->id))
+                                            @livewire('incremental-original-csv', ['control' => $control], key('contro-profile-two-' . $control->id))
                                         </td>
                                         <td class="px-6 py-4 text-sm text-gray-500 whitespace-nowrap">
                                             <button href="" wire:click="destroy({{ $control->id }})"

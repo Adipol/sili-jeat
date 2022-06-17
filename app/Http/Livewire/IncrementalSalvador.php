@@ -25,6 +25,7 @@ class IncrementalSalvador extends Component
         $new_pepu_ex, $update_pepu_ex,
         $new_pepu_nal, $update_pepu_nal,
         $new_ue, $update_ue,
+        $new_pf_ue, $update_pf_ue,
         $description_one;
 
     public function render()
@@ -71,6 +72,8 @@ class IncrementalSalvador extends Component
             'pepu_nal_upgrade' => $this->update_pepu_nal,
             'ue_new' => $this->new_ue,
             'ue_upgrade' => $this->update_ue,
+            'pf_ue_new' => $this->new_pf_ue,
+            'pf_ue_upgrade' => $this->update_pf_ue,
             'description' => $this->description_one
         ]);
     }

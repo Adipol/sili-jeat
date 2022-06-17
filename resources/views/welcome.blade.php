@@ -48,9 +48,9 @@
     </div>
     <footer class="text-gray-600 body-font">
         <div
-            class="container flex flex-col flex-wrap px-5 py-24 mx-auto  md:items-center lg:items-start md:flex-row md:flex-nowrap">
+            class="container flex flex-col flex-wrap px-5 py-24 mx-auto md:items-center lg:items-start md:flex-row md:flex-nowrap">
             <div class="flex-shrink-0 w-64 mx-auto text-center md:mx-0 md:text-left">
-                <p class="flex items-center justify-center font-medium text-gray-900  title-font md:justify-start">
+                <p class="flex items-center justify-center font-medium text-gray-900 title-font md:justify-start">
                     <span class="ml-3 text-xl"> <img class="hidden w-auto h-8 lg:block"
                             src="{{ asset('img/home/logo.png') }}" alt="Workflow"></span>
                 </p>
@@ -59,9 +59,9 @@
                     del cliente.
                 </p>
             </div>
-            <div class="flex flex-wrap flex-grow mt-10 -mb-10 text-center  md:pl-20 md:mt-0 md:text-left">
+            <div class="flex flex-wrap flex-grow mt-10 -mb-10 text-center md:pl-20 md:mt-0 md:text-left">
                 <div class="w-full px-4 lg:w-1/4 md:w-1/2">
-                    <h2 class="mb-3 text-sm font-medium tracking-widest text-gray-900  title-font">
+                    <h2 class="mb-3 text-sm font-medium tracking-widest text-gray-900 title-font">
                         Dirección
                     </h2>
                     <nav class="mb-10 list-none">
@@ -95,7 +95,7 @@
                 </div>
 
                 <div class="w-full px-4 lg:w-1/4 md:w-1/2">
-                    <h2 class="mb-3 text-sm font-medium tracking-widest text-gray-900  title-font">
+                    <h2 class="mb-3 text-sm font-medium tracking-widest text-gray-900 title-font">
                         Correo(s)
                     </h2>
                     <nav class="mb-10 list-none">
@@ -113,14 +113,14 @@
             </div>
         </div>
         <div class="bg-gray-100">
-            <div class="container flex flex-col flex-wrap px-5 py-4 mx-auto  sm:flex-row">
+            <div class="container flex flex-col flex-wrap px-5 py-4 mx-auto sm:flex-row">
                 <p class="text-sm text-center text-gray-500 sm:text-left">
-                    © 2021 Copyright:
+                    © 2022 v1.3 Copyright:
                     <a href="mailto:jorge.aguilar@grupoamlc.org" class="ml-1 text-gray-600" target="_blank">Powered by
                         AMLC
                     </a>
                 </p>
-                <span class="inline-flex justify-center mt-2  sm:ml-auto sm:mt-0 sm:justify-start">
+                <span class="inline-flex justify-center mt-2 sm:ml-auto sm:mt-0 sm:justify-start">
                 </span>
             </div>
         </div>

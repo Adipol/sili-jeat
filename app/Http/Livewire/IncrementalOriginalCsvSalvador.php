@@ -41,6 +41,8 @@ class IncrementalOriginalCsvSalvador extends Component
         'control.pepu_nal_upgrade' => 'required',
         'control.ue_new' => 'required',
         'control.ue_upgrade' => 'required',
+        'control.pf_ue_new' => 'required',
+        'control.pf_ue_upgrade' => 'required',
         'control.description' => 'required',
     ];
 

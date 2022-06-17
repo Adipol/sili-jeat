@@ -203,6 +203,20 @@
                                     value="{{ $import->ue_upgrade }}"
                                     class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                             </div>
+                            <div class="col-span-6 sm:col-span-3">
+                                <label for="new_pf_ue" class="block text-sm font-medium text-gray-700">Nuevo
+                                    PF-UE</label>
+                                <input type="text" name="new_pf_ue" id="new_ue" autocomplete="given-name" readonly
+                                    value="{{ $import->pf_ue_new }}"
+                                    class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                            </div>
+                            <div class="col-span-6 sm:col-span-3">
+                                <label for="update_pf_ue" class="block text-sm font-medium text-gray-700">Actualización
+                                    PF-UE</label>
+                                <input type="text" name="update_pf_ue" id="update_pf_ue" autocomplete="given-name"
+                                    readonly value="{{ $import->pf_ue_upgrade }}"
+                                    class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                            </div>
                         </div>
                         @if ($import->description)
                             <div class="col-span-6 mt-5">

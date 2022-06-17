@@ -137,7 +137,7 @@ $nav_links = [
                                 <a href="{{ route('logout') }}"
                                     class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem"
                                     onclick="event.preventDefault();
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                this.closest('form').submit();">Salir</a>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            this.closest('form').submit();">Salir</a>
                             </form>
                         </div>
                     </div>
@@ -145,7 +145,7 @@ $nav_links = [
             @else
                 <div>
                     <a href="{{ route('login') }}"
-                        class="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-blue-700 hover:text-white">Ingresar</a>
+                        class="px-3 py-2 text-sm font-medium text-white bg-blue-800 border-2 border-white rounded-md hover:bg-white hover:text-gray-700">Ingresar</a>
                 </div>
             @endauth
 

@@ -13,7 +13,7 @@ class AllDownloadHonduras extends Component
 {
     public $download_all;
 
-    public $code = ['ASO-PEP', 'FBI', 'F-PEP', 'GAFI', 'INTERPOL', 'OFAC', 'ONU', 'OPI', 'PEP-EX', 'PEP-NAL', 'PEPU-EX', 'PEPU-NAL', 'UE'];
+    public $code = ['ASO-PEP', 'FBI', 'F-PEP', 'GAFI', 'INTERPOL', 'OFAC', 'ONU', 'OPI', 'PEP-EX', 'PEP-NAL', 'PEPU-EX', 'PEPU-NAL', 'UE', 'PF-UE'];
     public $colors = [
         'ASO-PEP' => '#6a5bcdb8',
         'FBI' => '#708090',
@@ -28,6 +28,7 @@ class AllDownloadHonduras extends Component
         'PEPU-EX' => '#ff1493',
         'PEPU-NAL' => '#f0f',
         'UE' => '#07288d61',
+        'PF-UE' => '#1687f8'
     ];
 
     public $firstRun = true;

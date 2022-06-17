@@ -13,7 +13,7 @@ class AllDownloadSalvador extends Component
 {
     public $download_all;
 
-    public $code = ['ASO-PEP', 'FBI', 'F-PEP', 'GAFI', 'INTERPOL', 'OFAC', 'ONU', 'OPI', 'PEP-EX', 'PEP-NAL', 'PEP-SLV', 'INT-SLV', 'UE'];
+    public $code = ['ASO-PEP', 'FBI', 'F-PEP', 'GAFI', 'INTERPOL', 'OFAC', 'ONU', 'OPI', 'PEP-EX', 'PEP-NAL', 'PEP-SLV', 'INT-SLV', 'UE', 'PF-UE'];
     public $colors = [
         'ASO-PEP' => '#6a5bcdb8',
         'FBI' => '#708090',
@@ -28,6 +28,7 @@ class AllDownloadSalvador extends Component
         'PEP-SLV' => '#ff1493',
         'INT-SLV' => '#f0f',
         'UE' => '#07288d61',
+        'PF-UE' => '#1687f8'
     ];
 
     public $firstRun = true;
