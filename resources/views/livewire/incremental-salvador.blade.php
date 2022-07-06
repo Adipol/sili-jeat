@@ -93,8 +93,8 @@
                             <div class="col-span-6 sm:col-span-3">
                                 <label for="first-name" class="block text-sm font-medium text-gray-700">Actualización
                                     INTERPOL</label>
-                                <input type="number" name="update_interpol" id="first-name" autocomplete="given-name"
-                                    wire:model="update_interpol"
+                                <input type="number" name="update_interpol" id="first-name"
+                                    autocomplete="given-name" wire:model="update_interpol"
                                     class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                             </div>
                             <div class="col-span-6 sm:col-span-3">
@@ -149,8 +149,8 @@
                             <div class="col-span-6 sm:col-span-3">
                                 <label for="first-name" class="block text-sm font-medium text-gray-700">Actualización
                                     PEP-EX</label>
-                                <input type="number" name="update_pep_ex" id="update_pep_ex" autocomplete="given-name"
-                                    wire:model="update_pep_ex"
+                                <input type="number" name="update_pep_ex" id="update_pep_ex"
+                                    autocomplete="given-name" wire:model="update_pep_ex"
                                     class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                             </div>
                             <div class="col-span-6 sm:col-span-3">
@@ -164,40 +164,10 @@
                                 <label for="update_pep_nal"
                                     class="block text-sm font-medium text-gray-700">Actualización
                                     PEP-NAL</label>
-                                <input type="number" name="update_pep_nal" id="update_pep_nal" autocomplete="given-name"
-                                    wire:model="update_pep_nal"
+                                <input type="number" name="update_pep_nal" id="update_pep_nal"
+                                    autocomplete="given-name" wire:model="update_pep_nal"
                                     class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                             </div>
-                            {{-- <div class="col-span-6 sm:col-span-3">
-                                <label for="new_pepu_ex" class="block text-sm font-medium text-gray-700">Nuevo
-                                    PEPU-EX</label>
-                                <input type="number" name="new_pepu_ex" id="new_pepu_ex" autocomplete="given-name"
-                                    wire:model="new_pepu_ex"
-                                    class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
-                            </div>
-                            <div class="col-span-6 sm:col-span-3">
-                                <label for="update_pepu_ex"
-                                    class="block text-sm font-medium text-gray-700">Actualización
-                                    PEPU-EX</label>
-                                <input type="number" name="update_pepu_ex" id="update_pepu_ex" autocomplete="given-name"
-                                    wire:model="update_pepu_ex"
-                                    class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
-                            </div>
-                            <div class="col-span-6 sm:col-span-3">
-                                <label for="new_pepu_nal" class="block text-sm font-medium text-gray-700">Nuevo
-                                    PEPU-NAL</label>
-                                <input type="number" name="new_pepu_nal" id="new_pepu_nal" autocomplete="given-name"
-                                    wire:model="new_pepu_nal"
-                                    class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
-                            </div>
-                            <div class="col-span-6 sm:col-span-3">
-                                <label for="update_pepu_nal"
-                                    class="block text-sm font-medium text-gray-700">Actualización
-                                    PEPU-NAL</label>
-                                <input type="number" name="update_pepu_nal" id="update_pepu_nal"
-                                    autocomplete="given-name" wire:model="update_pepu_nal"
-                                    class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
-                            </div> --}}
                             <div class="col-span-6 sm:col-span-3">
                                 <label for="new_ue" class="block text-sm font-medium text-gray-700">Nuevo
                                     UE</label>
@@ -220,12 +190,13 @@
                                     class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                             </div>
                             <div class="col-span-6 sm:col-span-3">
-                                <label for="update_pf_ue" class="block text-sm font-medium text-gray-700">Actualización
+                                <label for="update_pf_ue"
+                                    class="block text-sm font-medium text-gray-700">Actualización
                                     PF-UE</label>
-                                <input type="number" name="update_pf_ue" id="update_pf_ue" autocomplete="given-name" r
-                                    wire:model="update_pf_ue"
+                                <input type="number" name="update_pf_ue" id="update_pf_ue"
+                                    autocomplete="given-name" r wire:model="update_pf_ue"
                                     class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
-                            </div>s
+                            </div>
                         </div>
                         <div class="col-span-6 mt-5">
                             <label for="about" class="block text-sm font-medium text-gray-700">
@@ -319,44 +290,4 @@
             </div>
         </div>
     </article>
-    {{-- @push('scripts')
-        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <script>
-            const swalWithBootstrapButtons = Swal.mixin({
-                customClass: {
-                    confirmButton: 'btn btn-success',
-                    cancelButton: 'btn btn-danger'
-                },
-                buttonsStyling: false
-            })
-
-            swalWithBootstrapButtons.fire({
-                title: 'Are you sure?',
-                text: "You won't be able to revert this!",
-                icon: 'warning',
-                showCancelButton: true,
-                confirmButtonText: 'Yes, delete it!',
-                cancelButtonText: 'No, cancel!',
-                reverseButtons: true
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    swalWithBootstrapButtons.fire(
-                        'Deleted!',
-                        'Your file has been deleted.',
-                        'success'
-                    )
-                } else if (
-                    /* Read more about handling dismissals below */
-                    result.dismiss === Swal.DismissReason.cancel
-                ) {
-                    swalWithBootstrapButtons.fire(
-                        'Cancelled',
-                        'Your imaginary file is safe :)',
-                        'error'
-                    )
-                }
-            })
-        </script>
-    @endpush --}}
-
 </div>

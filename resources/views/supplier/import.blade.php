@@ -2,17 +2,7 @@
 <x-import-layout>
     <div class="px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
         @if (Session::has('success'))
-            <div class="
-    my-3
-    block
-    text-sm text-left text-white
-    bg-green-500
-    h-12
-    flex
-    items-center
-    p-4
-    rounded-md
-  "
+            <div class="flex items-center block h-12 p-4 my-3 text-sm text-left text-white bg-green-500 rounded-md "
                 role="alert">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                     class="w-6 h-6 mx-2 stroke-current">
@@ -73,7 +63,6 @@
                                     <label class="block text-sm font-medium text-gray-700">
                                         Archivo
                                     </label>
-
                                     <div
                                         class="flex justify-center px-6 pt-5 pb-6 mt-1 border-2 border-gray-300 border-dashed rounded-md">
                                         <div class="space-y-1 text-center">
@@ -112,7 +101,7 @@
         </div>
     </div>
 
-    <article class="mb-6 card px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
+    <article class="px-4 py-6 mx-auto mb-6 card max-w-7xl sm:px-6 lg:px-8">
         <div class="text-sm card-body bh-gray-100">
             <header class="flex items-center justify-between">
                 <h1> <i class="far fa-calendar-alt"></i>
@@ -139,7 +128,6 @@
                                         class="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase">
                                         Detalle de carga
                                     </th>
-
                                 </tr>
                             </thead>
 
@@ -155,7 +143,6 @@
                                         <td class="px-6 py-4 text-sm text-gray-500 whitespace-nowrap">
                                             {{ $expense->detail->name }}
                                         </td>
-
                                     </tr>
                                 @endforeach
                             </tbody>

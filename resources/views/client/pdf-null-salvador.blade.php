@@ -18,7 +18,6 @@
         table {
             font-family: 'BrixSansRegular';
             font-size: 10pt;
-
         }
 
         .h2 {
@@ -63,11 +62,9 @@
             margin-bottom: 10px;
         }
 
-
         #pep {
             height: 50px;
             width: 100%;
-
         }
 
         {{-- #pep td {
@@ -86,7 +83,6 @@
             border-bottom: 2px solid #0a4661;
             border-top: 1px solid #0a4661;
             padding: 35px 20px;
-
         }
 
         .logo_factura {
@@ -100,22 +96,18 @@
 
         .info_factura {
             width: 20%;
-
         }
 
         .info_cliente {
             height: 50px;
             width: 100%;
-
         }
-
 
         .datos_cliente {
             padding: 10px 50px 0 20px;
             width: 100%;
             border-collapse: separate;
             border-spacing: 10px 10px;
-
         }
 
         .datos_cliente td:empty {
@@ -205,7 +197,7 @@
                         <table class="datos_cliente">
                             <tr>
                                 <td class="first_child"><label>Nombre o número de documento: </label></td>
-                                <td class="second_child"> <input type="text" name=""
+                                <td class="second_child"><input type="text" name=""
                                         value="{{ $valor1s }}"></input></td>
                             </tr>
                             <tr>

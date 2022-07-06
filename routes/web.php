@@ -7,10 +7,13 @@ use App\Http\Controllers\Client\PdfNullController;
 use App\Http\Controllers\Supplier\ConsultController;
 use App\Http\Controllers\Client\AllegadoPdfController;
 use App\Http\Controllers\Client\PdfHondurasController;
+use App\Http\Controllers\Client\PdfParaguayController;
 use App\Http\Controllers\Client\PdfSalvadorController;
 use App\Http\Controllers\Supplier\ConsultHondurasController;
+use App\Http\Controllers\Supplier\ConsultParaguayController;
 use App\Http\Controllers\Supplier\ConsultSalvadorController;
 use App\Http\Controllers\Client\AllegadoPdfHondurasController;
+use App\Http\Controllers\Client\AllegadoPdfParaguayController;
 use App\Http\Controllers\Client\AllegadoPdfSalvadorController;
 
 Route::get('/', HomeController::class)->name('home');
@@ -29,11 +32,17 @@ Route::get('/download-honduras-pdf/{id}', [PdfHondurasController::class, 'downlo
 
 Route::get('/download-salvador-pdf/{id}', [PdfSalvadorController::class, 'downloadPDF'])->name('download-salvador-pdf');
 
+Route::get('/download-paraguay-pdf/{id}', [PdfParaguayController::class, 'downloadPDF'])->name('download-paraguay-pdf');
+
+
 Route::get('/allegado-pdf/{id}', [AllegadoPdfController::class, 'downloadPDF'])->name('allegado-pdf');
 
 Route::get('/allegado-pdf-honduras/{id}', [AllegadoPdfHondurasController::class, 'downloadPDF'])->name('allegado-pdf-honduras');
 
-Route::get('/allegado-pdf-salvador/{id}', [AllegadoPdfSalvadorController::class, 'downloadPDF'])->name('allegado-pdf-honduras');
+Route::get('/allegado-pdf-salvador/{id}', [AllegadoPdfSalvadorController::class, 'downloadPDF'])->name('allegado-pdf-salvador');
+
+Route::get('/allegado-pdf-paraguay/{id}', [AllegadoPdfParaguayController::class, 'downloadPDF'])->name('allegado-pdf-paraguay');
+
 
 Route::get('/get-all-pep/{id}', [PdfController::class, 'getAllpep'])->name('get-all-pep');
 
@@ -42,3 +51,5 @@ Route::get('/download-pdf-null', [ConsultController::class, 'downloadPDFNull'])-
 Route::get('/download-pdf-null-honduras', [ConsultHondurasController::class, 'downloadPDFNull'])->name('download-pdf-null-honduras');
 
 Route::get('/download-pdf-null-salvador', [ConsultSalvadorController::class, 'downloadPDFNull'])->name('download-pdf-null-salvador');
+
+Route::get('/download-pdf-null-paraguay', [ConsultParaguayController::class, 'downloadPDFNull'])->name('download-pdf-null-paraguay');

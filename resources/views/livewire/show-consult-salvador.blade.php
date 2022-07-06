@@ -108,7 +108,7 @@
                             {{ $pep->management }}
                         </td>
                         <td title="Detalle de la persona" style="width:5%">
-                            @livewire('show-pep-salvador',['pep' => $pep], key('consul-profile-one-'.$pep->id_register))
+                            @livewire('show-pep-salvador', ['pep' => $pep], key('consul-profile-one-' . $pep->id_register))
                         </td>
                         <td style="width:5%" title="Imprimir detalle">
                             <a class="btn btn-red" href="{{ route('download-salvador-pdf', $pep->id_register) }}">
@@ -116,7 +116,7 @@
                             </a>
                         </td>
                         <td style="width:5%" title="Allegado">
-                            @livewire('allegado-salvador',['pep' => $pep], key('consul-profile-two-'.$pep->id))
+                            @livewire('allegado-salvador', ['pep' => $pep], key('consul-profile-two-' . $pep->id))
                         </td>
                     </tr>
                 @endforeach

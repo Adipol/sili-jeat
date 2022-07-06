@@ -19,7 +19,7 @@
             </div>
     </div>
     @if ($peps->count())
-        <table class="min-w-full  divide-y divide-gray-200">
+        <table class="min-w-full divide-y divide-gray-200">
             <thead class="bg-gray-50">
                 <tr>
                     <th scope="col"
@@ -108,7 +108,7 @@
                             {{ $pep->management }}
                         </td>
                         <td title="Detalle de la persona" style="width:5%">
-                            @livewire('show-pep',['pep' => $pep], key('consul-profile-one-'.$pep->id_register))
+                            @livewire('show-pep', ['pep' => $pep], key('consul-profile-one-' . $pep->id_register))
                         </td>
                         <td style="width:5%" title="Imprimir detalle">
                             <a class="btn btn-red" href="{{ route('download-pdf', $pep->id_register) }}">
@@ -116,7 +116,7 @@
                             </a>
                         </td>
                         <td style="width:5%" title="Allegado">
-                            @livewire('allegado',['pep' => $pep], key('consul-profile-two-'.$pep->id))
+                            @livewire('allegado', ['pep' => $pep], key('consul-profile-two-' . $pep->id))
                         </td>
                     </tr>
                 @endforeach

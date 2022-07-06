@@ -59,6 +59,15 @@ border-transparent @endif">
                         </li>
                     @endcan
 
+                    @can('Importar bd paraguay')
+                        <li
+                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('import.paraguay.index')border-yellow-500
+@else
+border-transparent @endif">
+                            <a href="{{ route('import.paraguay.index') }}">Base de datos (Paraguay)</a>
+                        </li>
+                    @endcan
+
                     @can('Cargar incremental')
                         <li
                             class="pl-2 mb-1 leading-7 border-l-4 @routeIs('supplier.incremental.index')border-yellow-500
@@ -86,6 +95,15 @@ border-transparent @endif">
                         </li>
                     @endcan
 
+                    @can('Cargar incremental paraguay')
+                        <li
+                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('supplier.incremental.paraguay.index')border-yellow-500
+@else
+border-transparent @endif">
+                            <a href="{{ route('supplier.incremental.paraguay.index') }}">Incremental (Paraguay)</a>
+                        </li>
+                    @endcan
+
                     @can('Cargar completa')
                         <li
                             class="pl-2 mb-1 leading-7 border-l-4 @routeIs('supplier.all.index')border-yellow-500
@@ -110,6 +128,15 @@ border-transparent @endif">
 @else
 border-transparent @endif">
                             <a href="{{ route('supplier.salvador.all.index') }}">Completa (El salvador)</a>
+                        </li>
+                    @endcan
+
+                    @can('Cargar completa paraguay')
+                        <li
+                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('supplier.paraguay.all.index')border-yellow-500
+@else
+border-transparent @endif">
+                            <a href="{{ route('supplier.paraguay.all.index') }}">Completa (Paraguay)</a>
                         </li>
                     @endcan
 

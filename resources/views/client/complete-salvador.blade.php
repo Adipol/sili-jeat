@@ -20,13 +20,11 @@
                     @endif
                 </h1>
             </header>
-
             <div>
                 @if ($complete)
-                    @livewire('client.all-download-salvador',['download_all'=>$complete],key($complete->id))
+                    @livewire('client.all-download-salvador', ['download_all' => $complete], key($complete->id))
                 @endif
             </div>
-
             <div class="flex flex-col mt-6">
                 <div class="-my-2 overflow-x-auto sm:-mx-3 lg:-mx-4">
                     <div class="inline-block min-w-full py-2 align-middle sm:px-3 lg:px-4">
@@ -61,7 +59,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="mt-6 mb-6">
                 <strong>Cantidad total: </strong>
                 @if ($lists)
@@ -70,5 +67,4 @@
             </div>
         </div>
     </article>
-
 </x-client-layout>

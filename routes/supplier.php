@@ -3,16 +3,20 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AllController;
 use App\Http\Controllers\AllHondurasController;
+use App\Http\Controllers\AllParaguayController;
 use App\Http\Controllers\AllSalvadorController;
 use App\Http\Controllers\Supplier\OtherController;
 use App\Http\Controllers\Supplier\ImportController;
 use App\Http\Controllers\Supplier\ConsultController;
 use App\Http\Controllers\Supplier\IncrementalController;
 use App\Http\Controllers\Supplier\ImportHondurasController;
+use App\Http\Controllers\Supplier\ImportParaguayController;
 use App\Http\Controllers\Supplier\ImportSalvadorController;
 use App\Http\Controllers\Supplier\ConsultHondurasController;
+use App\Http\Controllers\Supplier\ConsultParaguayController;
 use App\Http\Controllers\Supplier\ConsultSalvadorController;
 use App\Http\Controllers\Supplier\IncrementalHondurasController;
+use App\Http\Controllers\Supplier\IncrementalParaguayController;
 use App\Http\Controllers\Supplier\IncrementalSalvadorController;
 
 
@@ -53,3 +57,15 @@ Route::get('incremental-salvador', [IncrementalSalvadorController::class, 'index
 Route::get('salvador-all', [AllSalvadorController::class, 'index'])->middleware('can:Cargar completa el salvador')->name('supplier.salvador.all.index');
 
 Route::get('consults-salvador', [ConsultSalvadorController::class, 'index'])->name('consults.salvador.index');
+
+//Para paraguay
+
+Route::get('import-paraguay', [ImportParaguayController::class, 'index'])->middleware('can:Importar bd paraguay')->name('import.paraguay.index');
+
+Route::post('importParaguayExcel', [ImportParaguayController::class, 'importExcel'])->name('importExcel.paraguay');
+
+Route::get('incremental-paraguay', [IncrementalParaguayController::class, 'index'])->middleware('can:Cargar incremental paraguay')->name('supplier.incremental.paraguay.index');
+
+Route::get('paraguay-all', [AllParaguayController::class, 'index'])->middleware('can:Cargar completa paraguay')->name('supplier.paraguay.all.index');
+
+Route::get('consults-paraguay', [ConsultParaguayController::class, 'index'])->name('consults.paraguay.index');

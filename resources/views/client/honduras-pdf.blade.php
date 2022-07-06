@@ -18,7 +18,6 @@
         table {
             font-family: 'BrixSansRegular';
             font-size: 10pt;
-
         }
 
         .h2 {
@@ -63,11 +62,9 @@
             margin-bottom: 10px;
         }
 
-
         #pep {
             height: 50px;
             width: 100%;
-
         }
 
         {{-- #pep td {
@@ -86,7 +83,6 @@
             border-bottom: 2px solid #0a4661;
             border-top: 1px solid #0a4661;
             padding: 35px 20px;
-
         }
 
         .logo_factura {
@@ -100,13 +96,11 @@
 
         .info_factura {
             width: 20%;
-
         }
 
         .info_cliente {
             height: 50px;
             width: 100%;
-
         }
 
 
@@ -115,7 +109,6 @@
             width: 100%;
             border-collapse: separate;
             border-spacing: 10px 10px;
-
         }
 
         .datos_cliente td:empty {
@@ -152,7 +145,6 @@
             overflow: hidden;
             padding-bottom: 15px;
             background-color: #E0E0E0E0;
-
         }
 
         .round1 input {
@@ -168,7 +160,6 @@
         .nota {
             font-size: 8pt;
         }
-
     </style>
 </head>
 
@@ -204,11 +195,9 @@
                         <span class="h3">Datos consultados</span>
                         <table class="datos_cliente">
                             <tr>
-
                                 <td class="first_child"><label>Primer Nombre: </label></td>
                                 <td class="second_child"> <input type="text" name=""
                                         value="{{ $pep->name_one }}"></input></td>
-
                             </tr>
                             <tr>
                                 <td><label>Segundo Nombre: </label></td>
@@ -216,23 +205,23 @@
                             </tr>
                             <tr>
                                 <td> <label>Primer Apellido: </label></td>
-                                <td><input type="text" name="" value="{{ $pep->last_name_one }}"></input></td>
+                                <td><input type="text" name="" value="{{ $pep->last_name_one }}"></input>
+                                </td>
                             </tr>
                             <tr>
                                 <td><label>Segundo Apellido: </label></td>
-                                <td> <input type="text" name="" value="{{ $pep->last_name_two }}"></input></td>
+                                <td> <input type="text" name="" value="{{ $pep->last_name_two }}"></input>
+                                </td>
                             </tr>
                             <tr>
                                 <td><label>Tipo de Documento: </label> </td>
-                                <td> <input type="text" name="" value="{{ $pep->type_document }}"></input></td>
+                                <td> <input type="text" name="" value="{{ $pep->type_document }}"></input>
+                                </td>
                             </tr>
                             <tr>
                                 <td><label>Numero de Documento: </label></td>
-                                <td><input type="text" name="" value="{{ $pep->nro_document }}"></input></td>
-                            </tr>
-                            <tr>
-                                <td><label>Extensión: </label></td>
-                                <td><input type="text" name="" value="{{ $pep->extension }}"></input></td>
+                                <td><input type="text" name="" value="{{ $pep->nro_document }}"></input>
+                                </td>
                             </tr>
                             <tr>
                                 <td><label>Tipo de Lista: </label> </td>
@@ -252,7 +241,8 @@
                             </tr>
                             <tr>
                                 <td><label>Justificacion: </label></td>
-                                <td><textarea type="text" name="" rows="5">{{ $pep->justification }}</textarea>
+                                <td>
+                                    <textarea type="text" name="" rows="5">{{ $pep->justification }}</textarea>
                                 </td>
                             </tr>
                         </table>

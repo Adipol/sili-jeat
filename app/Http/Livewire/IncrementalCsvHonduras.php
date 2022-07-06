@@ -41,6 +41,7 @@ class IncrementalCsvHonduras extends Component
         return Storage::download($this->list->link_csv);
         //return response()->download(storage_path($cloudDisk . $this->list->link_csv));
     }
+
     public function render()
     {
         return view('livewire.incremental-csv-honduras');

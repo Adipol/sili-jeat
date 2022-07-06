@@ -36,9 +36,6 @@
 
     @livewireScripts
 
-
-
-
 </body>
 
 </html>

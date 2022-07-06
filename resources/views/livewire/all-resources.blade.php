@@ -82,7 +82,7 @@
                                             @livewire('incremental-xlsx',['list'=>$list],key('user-profile-one-'.$list->id))
                                         </td> --}}
                                         <td class="px-6 py-4 text-sm text-gray-500 whitespace-nowrap">
-                                            @livewire('incremental-csv',['list'=>$list],key('user-profile-two-'.$list->id))
+                                            @livewire('incremental-csv', ['list' => $list], key('user-profile-two-' . $list->id))
                                         </td>
                                     </tr>
                                 @endforeach

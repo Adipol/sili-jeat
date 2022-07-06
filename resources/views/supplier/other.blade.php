@@ -9,7 +9,9 @@
             <p>Usted puede importar otro tipo de listas en formato Csv (archivo plano)</p>
         </div>
     </article>
+
     <div>
         @livewire('other')
     </div>
+
 </x-import-layout>

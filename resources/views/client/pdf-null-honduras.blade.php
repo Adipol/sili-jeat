@@ -18,7 +18,6 @@
         table {
             font-family: 'BrixSansRegular';
             font-size: 10pt;
-
         }
 
         .h2 {
@@ -67,7 +66,6 @@
         #pep {
             height: 50px;
             width: 100%;
-
         }
 
         {{-- #pep td {
@@ -86,7 +84,6 @@
             border-bottom: 2px solid #0a4661;
             border-top: 1px solid #0a4661;
             padding: 35px 20px;
-
         }
 
         .logo_factura {
@@ -100,13 +97,11 @@
 
         .info_factura {
             width: 20%;
-
         }
 
         .info_cliente {
             height: 50px;
             width: 100%;
-
         }
 
 
@@ -152,7 +147,6 @@
             overflow: hidden;
             padding-bottom: 15px;
             background-color: #E0E0E0E0;
-
         }
 
         .round1 input {
@@ -168,7 +162,6 @@
         .nota {
             font-size: 8pt;
         }
-
     </style>
 </head>
 
@@ -210,7 +203,7 @@
                             </tr>
                             <tr>
                                 <td><label>Apellido: </label></td>
-                                <td> <input type="text" name="" value="{{ $valor2h }}"></input></td>
+                                <td><input type="text" name="" value="{{ $valor2h }}"></input></td>
                             </tr>
                         </table>
                     </div>

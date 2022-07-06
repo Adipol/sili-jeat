@@ -67,7 +67,6 @@
         #pep {
             height: 50px;
             width: 100%;
-
         }
 
         {{-- #pep td {
@@ -86,7 +85,6 @@
             border-bottom: 2px solid #0a4661;
             border-top: 1px solid #0a4661;
             padding: 35px 20px;
-
         }
 
         .logo_factura {
@@ -100,13 +98,11 @@
 
         .info_factura {
             width: 20%;
-
         }
 
         .info_cliente {
             height: 50px;
             width: 100%;
-
         }
 
 
@@ -115,7 +111,6 @@
             width: 100%;
             border-collapse: separate;
             border-spacing: 10px 10px;
-
         }
 
         .datos_cliente td:empty {
@@ -152,7 +147,6 @@
             overflow: hidden;
             padding-bottom: 15px;
             background-color: #E0E0E0E0;
-
         }
 
         .round1 input {
@@ -189,7 +183,6 @@
             background-color: #4CAF50;
             color: #fff
         }
-
     </style>
 </head>
 
@@ -225,11 +218,9 @@
                         <span class="h3">Datos consultados</span>
                         <table class="datos_cliente">
                             <tr>
-
                                 <td class="first_child"><label>Primer Nombre: </label></td>
                                 <td class="second_child"> <input type="text" name=""
                                         value="{{ $pep->name_one }}"></input></td>
-
                             </tr>
                             <tr>
                                 <td><label>Segundo Nombre: </label></td>
@@ -237,11 +228,13 @@
                             </tr>
                             <tr>
                                 <td> <label>Primer Apellido: </label></td>
-                                <td><input type="text" name="" value="{{ $pep->last_name_one }}"></input></td>
+                                <td><input type="text" name="" value="{{ $pep->last_name_one }}"></input>
+                                </td>
                             </tr>
                             <tr>
                                 <td><label>Segundo Apellido: </label></td>
-                                <td> <input type="text" name="" value="{{ $pep->last_name_two }}"></input></td>
+                                <td> <input type="text" name="" value="{{ $pep->last_name_two }}"></input>
+                                </td>
                             </tr>
                             <tr>
                                 <td><label>País: </label></td>
@@ -301,17 +294,20 @@
                                     </th> --}}
                                 </tr>
                             </thead>
-
                             <tbody>
                                 @foreach ($all as $one)
                                     <tr>
-                                        <td> {{ $one->name_one }}</td>
-                                        <td>{{ $one->name_two }}
+                                        <td>
+                                            {{ $one->name_one }}
+                                        </td>
+                                        <td>
+                                            {{ $one->name_two }}
                                         </td>
                                         <td>
                                             {{ $one->last_name_one }}
                                         </td>
-                                        <td>{{ $one->last_name_two }}
+                                        <td>
+                                            {{ $one->last_name_two }}
                                         </td>
                                         <td>
                                             {{ $one->type_document }}

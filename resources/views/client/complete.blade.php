@@ -24,7 +24,7 @@
 
             <div>
                 @if ($complete)
-                    @livewire('client.all-download',['download_all'=>$complete],key($complete->id))
+                    @livewire('client.all-download', ['download_all' => $complete], key($complete->id))
                 @endif
             </div>
 
@@ -62,14 +62,12 @@
                     </div>
                 </div>
             </div>
-
             <div class="mt-6 mb-6">
                 <strong>Cantidad total: </strong>
                 @if ($lists)
                     {{ $lists }}
                 @endif
             </div>
-
             <div class="mb-6 ">
                 @livewire('client.other')
             </div>

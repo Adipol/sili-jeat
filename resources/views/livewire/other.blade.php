@@ -83,13 +83,13 @@
                                         </td>
                                         <td class="px-6 py-4 text-xs font-medium">
                                             <div class="text-sm text-gray-900">
-                                                @livewire('other-lists',['other'=>$other],key('user-other-one-'.$other->id))
+                                                @livewire('other-lists', ['other' => $other], key('user-other-one-' . $other->id))
                                             </div>
                                             <div class="py-2 text-sm text-gray-900">{{ $other->lists }}</div>
                                         </td>
                                         <td class="px-6 py-4 text-xs font-medium">
                                             <div class="text-sm text-gray-900">
-                                                @livewire('other-others',['other'=>$other],key('user-other-two-'.$other->id))
+                                                @livewire('other-others', ['other' => $other], key('user-other-two-' . $other->id))
                                             </div>
                                             <div class="py-2 text-sm text-gray-900">{{ $other->others }}</div>
                                         </td>

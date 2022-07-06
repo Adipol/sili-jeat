@@ -30,10 +30,8 @@
                         </button>
                     </div>
                 </div>
-
             </form>
         </div>
-
     </article>
 
     <article class="mb-6 card">

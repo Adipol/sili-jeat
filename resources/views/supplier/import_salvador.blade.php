@@ -10,7 +10,6 @@
                         d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                 </svg>
                 {{ Session::get('success') }}
-
             </div>
         @endif
         <div class="md:grid md:grid-cols-3 md:gap-6">
@@ -145,7 +144,6 @@
                                         <td class="px-6 py-4 text-sm text-gray-500 whitespace-nowrap">
                                             {{ $expense->detail->name }}
                                         </td>
-
                                     </tr>
                                 @endforeach
                             </tbody>

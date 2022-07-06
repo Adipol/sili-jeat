@@ -66,6 +66,12 @@ $nav_links = [
                                     (El salvador)</a>
                             @endcan
 
+                            @can('Buscar paraguay')
+                                <a href="{{ route('consults.paraguay.index') }}"
+                                    class="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-blue-700 hover:text-white">Consultas
+                                    (Paraguay)</a>
+                            @endcan
+
                             @can('Descargar listas')
                                 <a href="{{ route('incremental.index') }}"
                                     class="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-blue-700 hover:text-white">Descargar
@@ -84,6 +90,12 @@ $nav_links = [
                                     Información (El salvador)</a>
                             @endcan
 
+                            @can('Descargar listas paraguay')
+                                <a href="{{ route('incremental.paraguay.index') }}"
+                                    class="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-blue-700 hover:text-white">Descargar
+                                    Información (Paraguay)</a>
+                            @endcan
+
                             @can('Cargar listas')
                                 <a href="{{ route('import.index') }}"
                                     class="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-blue-700 hover:text-white">Cargar
@@ -96,7 +108,6 @@ $nav_links = [
             </div>
             @auth
                 <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-
                     <button
                         class="p-1 text-gray-400 bg-gray-800 rounded-full hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
                         <span class="sr-only">View notifications</span>
@@ -107,7 +118,6 @@ $nav_links = [
                                 d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
                         </svg>
                     </button>
-
                     <!-- Profile dropdown -->
                     <div class="relative inline ml-3 display:inline" x-data="{ open: false }">
 
@@ -115,10 +125,9 @@ $nav_links = [
                             class="z-0 flex text-sm bg-gray-800 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
                             id="user-menu" aria-expanded="false" aria-haspopup="true">
                             <span class="sr-only">Open user menu</span>
-                            <img class="w-8 h-8 rounded-full" src="{{ auth()->user()->profile_photo_url }}" alt="">
+                            <img class="w-8 h-8 rounded-full" src="{{ auth()->user()->profile_photo_url }}"
+                                alt="">
                         </button>
-
-
                         <div x-show="open" x-on:click.away="open=false"
                             class="absolute right-0 z-20 w-48 py-1 mt-2 origin-top-right bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
                             role="menu" aria-orientation="vertical" aria-labelledby="user-menu">
@@ -148,8 +157,6 @@ $nav_links = [
                         class="px-3 py-2 text-sm font-medium text-white bg-blue-800 border-2 border-white rounded-md hover:bg-white hover:text-gray-700">Ingresar</a>
                 </div>
             @endauth
-
-
         </div>
     </div>
 
@@ -175,6 +182,12 @@ $nav_links = [
                     (El salvador)</a>
             @endcan
 
+            @can('Buscar paraguay')
+                <a href="{{ route('consults.paraguay.index') }}"
+                    class="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-blue-700 hover:text-white">Consultas
+                    (Paraguay)</a>
+            @endcan
+
             @can('Descargar listas')
                 <a href="{{ route('incremental.index') }}"
                     class="block px-3 py-2 text-base font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
@@ -193,12 +206,17 @@ $nav_links = [
                     Información (El salvador)</a>
             @endcan
 
+            @can('Descargar listas paraguay')
+                <a href="{{ route('incremental.paraguay.index') }}"
+                    class="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-blue-700 hover:text-white">Descargar
+                    Información (Paraguay)</a>
+            @endcan
+
             @can('Cargar listas')
                 <a href="{{ route('import.index') }}"
                     class="block px-3 py-2 text-base font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
                     aria-current="page">Cargar información</a>
             @endcan
-
         </div>
     </div>
 </nav>

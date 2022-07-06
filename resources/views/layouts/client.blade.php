@@ -60,6 +60,15 @@ border-transparent @endif">
                         </li>
                     @endcan
 
+                    @can('Descargar incremental paraguay')
+                        <li
+                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('incremental.paraguay.index')border-yellow-500
+@else
+border-transparent @endif">
+                            <a href="{{ route('incremental.paraguay.index') }}">Incremental (Paraguay)</a>
+                        </li>
+                    @endcan
+
                     @can('Descargar completa')
                         <li
                             class="pl-2 mb-1 leading-7 border-l-4 @routeIs('complete.index')border-yellow-500
@@ -84,6 +93,15 @@ border-transparent @endif">
 @else
 border-transparent @endif">
                             <a href="{{ route('complete.salvador.index') }}">Completa (El salvador)</a>
+                        </li>
+                    @endcan
+
+                    @can('Descargar completa paraguay')
+                        <li
+                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('complete.paraguay.index')border-yellow-500
+@else
+border-transparent @endif">
+                            <a href="{{ route('complete.paraguay.index') }}">Completa (Paraguay)</a>
                         </li>
                     @endcan
 

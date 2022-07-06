@@ -1,7 +1,7 @@
 <x-app-layout>
     <div class="px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
 
-        <nav class="flex items-center block h-12 p-4 mb-6 text-sm text-left text-gray-600 bg-gray-500 border border-gray-400 rounded-md  bg-opacity-10"
+        <nav class="flex items-center block h-12 p-4 mb-6 text-sm text-left text-gray-600 bg-gray-500 border border-gray-400 rounded-md bg-opacity-10"
             role="alert">
             <ol class="flex list-reset text-grey-dark">
                 <li><a href="/" class="font-bold"><i class="fas fa-home"></i></a></li>
@@ -132,10 +132,6 @@
                                 </th>
                                 <th scope="col"
                                     class="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 ">
-                                    Extensión
-                                </th>
-                                <th scope="col"
-                                    class="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 ">
                                     Tipo allegado
                                 </th>
                                 <th scope="col"
@@ -145,7 +141,6 @@
                             </tr>
                         </thead>
                         <tbody class="bg-white divide-y divide-gray-200">
-
                             @foreach ($all as $one)
                                 <tr>
                                     <td class="px-6 py-4 text-sm text-gray-500 whitespace-nowrap">
@@ -165,9 +160,6 @@
                                     </td>
                                     <td class="px-6 py-4 text-sm text-gray-500 whitespace-nowrap">
                                         {{ $one->nro_document }}
-                                    </td>
-                                    <td class="px-6 py-4 text-sm text-gray-500 whitespace-nowrap">
-                                        {{ $one->extension }}
                                     </td>
                                     <td class="px-6 py-4 text-sm text-gray-500 whitespace-nowrap">
                                         {{ $one->type_fam }}
