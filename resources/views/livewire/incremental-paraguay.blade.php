@@ -195,7 +195,22 @@
                                     class="block text-sm font-medium text-gray-700">Actualización
                                     PF-UE</label>
                                 <input type="number" name="update_pf_ue" id="update_pf_ue"
-                                    autocomplete="given-name" r wire:model="update_pf_ue"
+                                    autocomplete="given-name" wire:model="update_pf_ue"
+                                    class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                            </div>
+                            <div class="col-span-6 sm:col-span-3">
+                                <label for="new_ue" class="block text-sm font-medium text-gray-700">Nuevo
+                                    ENGEL</label>
+                                <input type="number" name="new_engel" id="new_engel" autocomplete="given-name"
+                                    wire:model="new_engel"
+                                    class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                            </div>
+                            <div class="col-span-6 sm:col-span-3">
+                                <label for="update_engel"
+                                    class="block text-sm font-medium text-gray-700">Actualización
+                                    ENGEL</label>
+                                <input type="number" name="update_engel" id="update_engel"
+                                    autocomplete="given-name" wire:model="update_engel"
                                     class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                             </div>
                         </div>

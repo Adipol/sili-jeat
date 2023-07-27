@@ -14,7 +14,6 @@ class IncrementalOriginalCsvParaguay extends Component
     public $control;
     public $open = false, $file, $identificador;
 
-
     protected $rules = [
         'control.aso_pep_new' => 'required',
         'control.aso_pep_upgrade' => 'required',
@@ -44,6 +43,8 @@ class IncrementalOriginalCsvParaguay extends Component
         'control.ue_upgrade' => 'required',
         'control.pf_ue_new' => 'required',
         'control.pf_ue_upgrade' => 'required',
+        'control.engel_new' => 'required',
+        'control.engel_upgrade' => 'required',
         'control.description' => 'required',
     ];
     public function mount(ParaguayImport $control)

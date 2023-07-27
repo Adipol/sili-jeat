@@ -217,6 +217,21 @@
                                     autocomplete="given-name" readonly value="{{ $import->pf_ue_upgrade }}"
                                     class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                             </div>
+                            <div class="col-span-6 sm:col-span-3">
+                                <label for="new_engel" class="block text-sm font-medium text-gray-700">Nuevo
+                                    ENGEL</label>
+                                <input type="text" name="new_engel" id="new_engel" autocomplete="given-name"
+                                    readonly value="{{ $import->engel_new }}"
+                                    class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                            </div>
+                            <div class="col-span-6 sm:col-span-3">
+                                <label for="update_engel"
+                                    class="block text-sm font-medium text-gray-700">Actualización
+                                    ENGEL</label>
+                                <input type="text" name="update_engel" id="update_engel"
+                                    autocomplete="given-name" readonly value="{{ $import->engel_upgrade }}"
+                                    class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                            </div>
                         </div>
                         @if ($import->description)
                             <div class="col-span-6 mt-5">

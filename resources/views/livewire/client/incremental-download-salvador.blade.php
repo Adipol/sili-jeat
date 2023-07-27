@@ -12,7 +12,6 @@
                         <strong>Cargado:
                         </strong> {{ $import->created_at->diffForHumans() }}
                     </div>
-
                 </header>
 
                 <div x-show="open">
@@ -21,15 +20,15 @@
                             <div class="col-span-6 sm:col-span-3">
                                 <label for="first-name" class="block text-sm font-medium text-gray-700">Nuevo
                                     ASO-PEP</label>
-                                <input type="text" name="first-name" id="first-name" autocomplete="given-name" readonly
-                                    value="{{ $import->aso_pep_new }}"
+                                <input type="text" name="first-name" id="first-name" autocomplete="given-name"
+                                    readonly value="{{ $import->aso_pep_new }}"
                                     class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                             </div>
                             <div class="col-span-6 sm:col-span-3">
                                 <label for="first-name" class="block text-sm font-medium text-gray-700">Actualización
                                     ASO-PEP</label>
-                                <input type="text" name="first-name" id="first-name" autocomplete="given-name" readonly
-                                    value="{{ $import->aso_pep_upgrade }}"
+                                <input type="text" name="first-name" id="first-name" autocomplete="given-name"
+                                    readonly value="{{ $import->aso_pep_upgrade }}"
                                     class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                             </div>
                             <div class="col-span-6 sm:col-span-3">
@@ -42,15 +41,15 @@
                             <div class="col-span-6 sm:col-span-3">
                                 <label for="first-name" class="block text-sm font-medium text-gray-700">Actualización
                                     FBI</label>
-                                <input type="text" name="update_fbi" id="first-name" autocomplete="given-name" readonly
-                                    value="{{ $import->fbi_upgrade }}"
+                                <input type="text" name="update_fbi" id="first-name" autocomplete="given-name"
+                                    readonly value="{{ $import->fbi_upgrade }}"
                                     class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                             </div>
                             <div class="col-span-6 sm:col-span-3">
                                 <label for="first-name" class="block text-sm font-medium text-gray-700">Nuevo
                                     F-PEP</label>
-                                <input type="text" name="new_f_pep" id="first-name" autocomplete="given-name" readonly
-                                    value="{{ $import->f_pep_new }}"
+                                <input type="text" name="new_f_pep" id="first-name" autocomplete="given-name"
+                                    readonly value="{{ $import->f_pep_new }}"
                                     class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                             </div>
                             <div class="col-span-6 sm:col-span-3">
@@ -70,8 +69,8 @@
                             <div class="col-span-6 sm:col-span-3">
                                 <label for="first-name" class="block text-sm font-medium text-gray-700">Actualización
                                     GAFI</label>
-                                <input type="text" name="update_gafi" id="first-name" autocomplete="given-name" readonly
-                                    value="{{ $import->gafi_upgrade }}"
+                                <input type="text" name="update_gafi" id="first-name" autocomplete="given-name"
+                                    readonly value="{{ $import->gafi_upgrade }}"
                                     class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                             </div>
                             <div class="col-span-6 sm:col-span-3">
@@ -91,8 +90,8 @@
                             <div class="col-span-6 sm:col-span-3">
                                 <label for="new_ofac" class="block text-sm font-medium text-gray-700">Nuevo
                                     OFAC</label>
-                                <input type="text" name="new_ofac" id="new_ofac" autocomplete="given-name" readonly
-                                    value="{{ $import->ofac_new }}"
+                                <input type="text" name="new_ofac" id="new_ofac" autocomplete="given-name"
+                                    readonly value="{{ $import->ofac_new }}"
                                     class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                             </div>
                             <div class="col-span-6 sm:col-span-3">
@@ -105,43 +104,43 @@
                             <div class="col-span-6 sm:col-span-3">
                                 <label for="new_onu" class="block text-sm font-medium text-gray-700">Nuevo
                                     ONU</label>
-                                <input type="text" name="new_onu" id="new_onu" autocomplete="given-name" readonly
-                                    value="{{ $import->onu_new }}"
+                                <input type="text" name="new_onu" id="new_onu" autocomplete="given-name"
+                                    readonly value="{{ $import->onu_new }}"
                                     class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                             </div>
                             <div class="col-span-6 sm:col-span-3">
                                 <label for="first-name" class="block text-sm font-medium text-gray-700">Actualización
                                     ONU</label>
-                                <input type="text" name="update_onu" id="update_onu" autocomplete="given-name" readonly
-                                    value="{{ $import->onu_upgrade }}"
+                                <input type="text" name="update_onu" id="update_onu" autocomplete="given-name"
+                                    readonly value="{{ $import->onu_upgrade }}"
                                     class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                             </div>
                             <div class="col-span-6 sm:col-span-3">
                                 <label for="new_opi" class="block text-sm font-medium text-gray-700">Nuevo
                                     OPI</label>
-                                <input type="text" name="new_opi" id="new_opi" autocomplete="given-name" readonly
-                                    value="{{ $import->opi_new }}"
+                                <input type="text" name="new_opi" id="new_opi" autocomplete="given-name"
+                                    readonly value="{{ $import->opi_new }}"
                                     class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                             </div>
                             <div class="col-span-6 sm:col-span-3">
                                 <label for="update_opi" class="block text-sm font-medium text-gray-700">Actualización
                                     OPI</label>
-                                <input type="text" name="update_opi" id="update_opi" autocomplete="given-name" readonly
-                                    value="{{ $import->opi_upgrade }}"
+                                <input type="text" name="update_opi" id="update_opi" autocomplete="given-name"
+                                    readonly value="{{ $import->opi_upgrade }}"
                                     class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                             </div>
                             <div class="col-span-6 sm:col-span-3">
                                 <label for="new_pep_ex" class="block text-sm font-medium text-gray-700">Nuevo
                                     PEP-EX</label>
-                                <input type="text" name="new_pep_ex" id="new_pep_ex" autocomplete="given-name" readonly
-                                    value="{{ $import->pep_ex_new }}"
+                                <input type="text" name="new_pep_ex" id="new_pep_ex" autocomplete="given-name"
+                                    readonly value="{{ $import->pep_ex_new }}"
                                     class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                             </div>
                             <div class="col-span-6 sm:col-span-3">
                                 <label for="first-name" class="block text-sm font-medium text-gray-700">Actualización
                                     PEP-EX</label>
-                                <input type="text" name="update_pep_ex" id="update_pep_ex" autocomplete="given-name"
-                                    readonly value="{{ $import->pep_ex_upgrade }}"
+                                <input type="text" name="update_pep_ex" id="update_pep_ex"
+                                    autocomplete="given-name" readonly value="{{ $import->pep_ex_upgrade }}"
                                     class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                             </div>
                             <div class="col-span-6 sm:col-span-3">
@@ -155,8 +154,8 @@
                                 <label for="update_pep_nal"
                                     class="block text-sm font-medium text-gray-700">Actualización
                                     PEP-NAL</label>
-                                <input type="text" name="update_pep_nal" id="update_pep_nal" autocomplete="given-name"
-                                    readonly value="{{ $import->pep_nal_upgrade }}"
+                                <input type="text" name="update_pep_nal" id="update_pep_nal"
+                                    autocomplete="given-name" readonly value="{{ $import->pep_nal_upgrade }}"
                                     class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                             </div>
                             {{-- <div class="col-span-6 sm:col-span-3">
@@ -192,29 +191,45 @@
                             <div class="col-span-6 sm:col-span-3">
                                 <label for="new_ue" class="block text-sm font-medium text-gray-700">Nuevo
                                     UE</label>
-                                <input type="text" name="new_ue" id="new_ue" autocomplete="given-name" readonly
-                                    value="{{ $import->ue_new }}"
+                                <input type="text" name="new_ue" id="new_ue" autocomplete="given-name"
+                                    readonly value="{{ $import->ue_new }}"
                                     class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                             </div>
                             <div class="col-span-6 sm:col-span-3">
                                 <label for="update_ue" class="block text-sm font-medium text-gray-700">Actualización
                                     UE</label>
-                                <input type="text" name="update_ue" id="update_ue" autocomplete="given-name" readonly
-                                    value="{{ $import->ue_upgrade }}"
+                                <input type="text" name="update_ue" id="update_ue" autocomplete="given-name"
+                                    readonly value="{{ $import->ue_upgrade }}"
                                     class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                             </div>
                             <div class="col-span-6 sm:col-span-3">
                                 <label for="new_pf_ue" class="block text-sm font-medium text-gray-700">Nuevo
                                     PF-UE</label>
-                                <input type="text" name="new_pf_ue" id="new_ue" autocomplete="given-name" readonly
-                                    value="{{ $import->pf_ue_new }}"
+                                <input type="text" name="new_pf_ue" id="new_ue" autocomplete="given-name"
+                                    readonly value="{{ $import->pf_ue_new }}"
                                     class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                             </div>
                             <div class="col-span-6 sm:col-span-3">
-                                <label for="update_pf_ue" class="block text-sm font-medium text-gray-700">Actualización
+                                <label for="update_pf_ue"
+                                    class="block text-sm font-medium text-gray-700">Actualización
                                     PF-UE</label>
-                                <input type="text" name="update_pf_ue" id="update_pf_ue" autocomplete="given-name"
-                                    readonly value="{{ $import->pf_ue_upgrade }}"
+                                <input type="text" name="update_pf_ue" id="update_pf_ue"
+                                    autocomplete="given-name" readonly value="{{ $import->pf_ue_upgrade }}"
+                                    class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                            </div>
+                            <div class="col-span-6 sm:col-span-3">
+                                <label for="new_engel" class="block text-sm font-medium text-gray-700">Nuevo
+                                    ENGEL</label>
+                                <input type="text" name="new_engel" id="new_engel" autocomplete="given-name"
+                                    readonly value="{{ $import->engel_new }}"
+                                    class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                            </div>
+                            <div class="col-span-6 sm:col-span-3">
+                                <label for="update_engel"
+                                    class="block text-sm font-medium text-gray-700">Actualización
+                                    ENGEL</label>
+                                <input type="text" name="update_engel" id="update_engel"
+                                    autocomplete="given-name" readonly value="{{ $import->engel_upgrade }}"
                                     class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                             </div>
                         </div>
@@ -243,9 +258,7 @@
                         Descarga CSV
                     </button>
                 </div>
-
             </div>
-
         </article>
     @endforeach
 </div>

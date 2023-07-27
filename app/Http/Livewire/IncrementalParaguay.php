@@ -26,6 +26,7 @@ class IncrementalParaguay extends Component
         $new_pepu_nal, $update_pepu_nal,
         $new_ue, $update_ue,
         $new_pf_ue, $update_pf_ue,
+        $new_engel, $update_engel,
         $description_one;
 
     public function render()
@@ -73,6 +74,8 @@ class IncrementalParaguay extends Component
             'ue_upgrade' => $this->update_ue,
             'pf_ue_new' => $this->new_pf_ue,
             'pf_ue_upgrade' => $this->update_pf_ue,
+            'engel_new' => $this->new_engel,
+            'engel_upgrade' => $this->update_engel,
             'description' => $this->description_one
         ]);
     }
@@ -84,11 +87,9 @@ class IncrementalParaguay extends Component
         if ($control->link_xlsx) {
             Storage::delete($control->link_xlsx);
         }
-
         if ($control->link_csv) {
             Storage::delete($control->link_csv);
         }
-
         ParaguayImport::destroy($id);
     }
 }

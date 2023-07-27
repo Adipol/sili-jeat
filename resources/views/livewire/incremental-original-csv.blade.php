@@ -129,7 +129,8 @@
                 </div>
                 <div class="col-span-6 sm:col-span-3">
                     <x-jet-label value="Actualización PEPU-NAL" />
-                    <x-jet-input wire:model="control.pepu_nal_upgrade" type="text" class="block w-full" readonly />
+                    <x-jet-input wire:model="control.pepu_nal_upgrade" type="text" class="block w-full"
+                        readonly />
                 </div>
             </div>
             <div class="grid grid-cols-6 gap-6 mb-4">
@@ -150,6 +151,16 @@
                 <div class="col-span-6 sm:col-span-3">
                     <x-jet-label value="Actualización PF_UE" />
                     <x-jet-input wire:model="control.pf_ue_upgrade" type="text" class="block w-full" readonly />
+                </div>
+            </div>
+            <div class="grid grid-cols-6 gap-6 mb-4">
+                <div class="col-span-6 sm:col-span-3">
+                    <x-jet-label value="Nuevo ENGEL" />
+                    <x-jet-input wire:model="control.engel_new" type="text" class="block w-full" readonly />
+                </div>
+                <div class="col-span-6 sm:col-span-3">
+                    <x-jet-label value="Actualización ENGEL" />
+                    <x-jet-input wire:model="control.engel_upgrade" type="text" class="block w-full" readonly />
                 </div>
             </div>
             <div class="col-span-6 mt-5 mb-4">

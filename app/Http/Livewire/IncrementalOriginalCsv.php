@@ -43,8 +43,11 @@ class IncrementalOriginalCsv extends Component
         'control.ue_upgrade' => 'required',
         'control.pf_ue_new' => 'required',
         'control.pf_ue_upgrade' => 'required',
+        'control.engel_new' => 'required',
+        'control.engel_upgrade' => 'required',
         'control.description' => 'required',
     ];
+
     public function mount(Import $control)
     {
         $this->control = $control;

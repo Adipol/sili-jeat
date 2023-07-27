@@ -13,7 +13,7 @@ class AllDownloadParaguay extends Component
 {
     public $download_all;
 
-    public $code = ['ASO-PEP', 'FBI', 'F-PEP', 'GAFI', 'INTERPOL', 'OFAC', 'ONU', 'OPI', 'PEP-EX', 'PEP-NAL', 'UE', 'PF-UE'];
+    public $code = ['ASO-PEP', 'FBI', 'F-PEP', 'GAFI', 'INTERPOL', 'OFAC', 'ONU', 'OPI', 'PEP-EX', 'PEP-NAL', 'UE', 'PF-UE', 'ENGEL'];
     public $colors = [
         'ASO-PEP' => '#6a5bcdb8',
         'FBI' => '#708090',
@@ -26,7 +26,8 @@ class AllDownloadParaguay extends Component
         'PEP-EX' => '#ff4500',
         'PEP-NAL' => '#006400',
         'UE' => '#07288d61',
-        'PF-UE' => '#1687f8'
+        'PF-UE' => '#1687f8',
+        'ENGEL' => '#9400D3'
     ];
 
     public $firstRun = true;
