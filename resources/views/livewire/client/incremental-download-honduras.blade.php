@@ -232,6 +232,20 @@
                                     autocomplete="given-name" readonly value="{{ $import->engel_upgrade }}"
                                     class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                             </div>
+                            <div class="col-span-6 sm:col-span-3">
+                                <label for="new_uk" class="block text-sm font-medium text-gray-700">Nuevo
+                                    UK</label>
+                                <input type="text" name="new_uk" id="new_uk" autocomplete="given-name"
+                                    readonly value="{{ $import->uk_new }}"
+                                    class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                            </div>
+                            <div class="col-span-6 sm:col-span-3">
+                                <label for="update_uk" class="block text-sm font-medium text-gray-700">Actualización
+                                    UK</label>
+                                <input type="text" name="update_uk" id="update_uk" autocomplete="given-name"
+                                    readonly value="{{ $import->uk_upgrade }}"
+                                    class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                            </div>
                         </div>
                         @if ($import->description)
                             <div class="col-span-6 mt-5">

@@ -27,6 +27,7 @@ class IncrementalSalvador extends Component
         $new_ue, $update_ue,
         $new_pf_ue, $update_pf_ue,
         $new_engel, $update_engel,
+        $new_uk, $update_uk,
         $description_one;
 
     public function render()
@@ -76,6 +77,8 @@ class IncrementalSalvador extends Component
             'pf_ue_upgrade' => $this->update_pf_ue,
             'engel_new' => $this->new_engel,
             'engel_upgrade' => $this->update_engel,
+            'uk_new' => $this->new_uk,
+            'uk_upgrade' => $this->update_uk,
             'description' => $this->description_one
         ]);
     }
