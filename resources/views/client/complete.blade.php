@@ -69,7 +69,7 @@
                 @endif
             </div>
             <div class="mb-6 ">
-                @livewire('client.other')
+                {{-- @livewire('client.other') --}}
             </div>
         </div>
     </article>

@@ -141,12 +141,12 @@ border-transparent @endif">
                     @endcan
 
                     @can('Cargar otros')
-                        <li
+                        {{-- <li
                             class="pl-2 mb-1 leading-7 border-l-4  @routeIs('supplier.other.index')border-yellow-500
 @else
 border-transparent @endif">
                             <a href="{{ route('supplier.other.index') }}">Dividir listas</a>
-                        </li>
+                        </li> --}}
                     @endcan
                 </ul>
             </aside>
