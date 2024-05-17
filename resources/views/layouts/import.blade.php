@@ -68,6 +68,15 @@ border-transparent @endif">
                         </li>
                     @endcan
 
+                    @can('Importar bd guatemala')
+                        <li
+                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('import.guatemala.index')border-yellow-500
+@else
+border-transparent @endif">
+                            <a href="{{ route('import.guatemala.index') }}">Base de datos (Guatemala)</a>
+                        </li>
+                    @endcan
+
                     @can('Cargar incremental')
                         <li
                             class="pl-2 mb-1 leading-7 border-l-4 @routeIs('supplier.incremental.index')border-yellow-500
@@ -101,6 +110,15 @@ border-transparent @endif">
 @else
 border-transparent @endif">
                             <a href="{{ route('supplier.incremental.paraguay.index') }}">Incremental (Paraguay)</a>
+                        </li>
+                    @endcan
+
+                    @can('Cargar incremental guatemala')
+                        <li
+                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('supplier.incremental.guatemala.index')border-yellow-500
+@else
+border-transparent @endif">
+                            <a href="{{ route('supplier.incremental.guatemala.index') }}">Incremental (Guatemala)</a>
                         </li>
                     @endcan
 
@@ -140,14 +158,23 @@ border-transparent @endif">
                         </li>
                     @endcan
 
-                    @can('Cargar otros')
-                        {{-- <li
+                    @can('Cargar completa guatemala')
+                        <li
+                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('supplier.guatemala.all.index')border-yellow-500
+@else
+border-transparent @endif">
+                            <a href="{{ route('supplier.guatemala.all.index') }}">Completa (Guatemala)</a>
+                        </li>
+                    @endcan
+
+                    {{-- @can('Cargar otros') --}}
+                    {{-- <li
                             class="pl-2 mb-1 leading-7 border-l-4  @routeIs('supplier.other.index')border-yellow-500
 @else
 border-transparent @endif">
                             <a href="{{ route('supplier.other.index') }}">Dividir listas</a>
                         </li> --}}
-                    @endcan
+                    {{-- @endcan --}}
                 </ul>
             </aside>
             <div class="col-span-4 card">

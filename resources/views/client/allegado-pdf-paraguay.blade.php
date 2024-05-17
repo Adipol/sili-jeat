@@ -278,7 +278,8 @@
                 <td class="info_cliente">
                     <div class="round1">
                         <span class="h3">Allegados</span>
-                        <table class="you">
+                        <table class="you" style="border:1px solid black;margin-left:auto;margin-right:auto;"
+                            border="1">
                             <thead>
                                 <tr>
                                     <th>
@@ -299,8 +300,11 @@
                                     <th>
                                         Número
                                     </th>
-                                    <th>
+                                    {{-- <th>
                                         Tipo allegado
+                                    </th> --}}
+                                    <th>
+                                        Detalle
                                     </th>
                                 </tr>
                             </thead>
@@ -325,7 +329,7 @@
                                             {{ $one->nro_document }}
                                         </td>
                                         <td>
-                                            {{ $one->type_fam }}
+                                            {{ $one->detail }}
                                         </td>
                                     </tr>
                                 @endforeach

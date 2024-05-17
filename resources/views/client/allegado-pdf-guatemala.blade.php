@@ -67,6 +67,7 @@
         #pep {
             height: 50px;
             width: 100%;
+
         }
 
         {{-- #pep td {
@@ -85,6 +86,7 @@
             border-bottom: 2px solid #0a4661;
             border-top: 1px solid #0a4661;
             padding: 35px 20px;
+
         }
 
         .logo_factura {
@@ -98,11 +100,13 @@
 
         .info_factura {
             width: 20%;
+
         }
 
         .info_cliente {
             height: 50px;
             width: 100%;
+
         }
 
 
@@ -111,6 +115,7 @@
             width: 100%;
             border-collapse: separate;
             border-spacing: 10px 10px;
+
         }
 
         .datos_cliente td:empty {
@@ -147,6 +152,7 @@
             overflow: hidden;
             padding-bottom: 15px;
             background-color: #E0E0E0E0;
+
         }
 
         .round1 input {
@@ -198,6 +204,7 @@
                 <td class="info_empresa">
                     <div>
                         <span class="h2">AMLC - Listas de control</span>
+                        <span class="h4">(GUATEMALA)</span>
                         <span class="h4">REPORTE DE CONSULTA</span>
                     </div>
                 </td>
@@ -237,8 +244,18 @@
                                 </td>
                             </tr>
                             <tr>
+                                <td><label>Tipo de documento: </label></td>
+                                <td> <input type="text" name="" value="{{ $pep->type_document }}"></input>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label>Número de documento: </label></td>
+                                <td> <input type="text" name="" value="{{ $pep->nro_document }}"></input>
+                                </td>
+                            </tr>
+                            <tr>
                                 <td><label>País: </label></td>
-                                <td><input type="text" name="" value="{{ $pep->country }}"></input></td>
+                                <td> <input type="text" name="" value="{{ $pep->country }}"></input></td>
                             </tr>
                             <tr>
                                 <td><label>Cargo: </label></td>
@@ -284,9 +301,6 @@
                                     <th>
                                         Número
                                     </th>
-                                    <th>
-                                        Extensión
-                                    </th>
                                     {{-- <th>
                                         Tipo allegado
                                     </th> --}}
@@ -315,12 +329,6 @@
                                         <td>
                                             {{ $one->nro_document }}
                                         </td>
-                                        <td>
-                                            {{ $one->extension }}
-                                        </td>
-                                        {{-- <td>
-                                            {{ $one->type_fam }}
-                                        </td> --}}
                                         <td>
                                             {{ $one->detail }}
                                         </td>

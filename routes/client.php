@@ -3,14 +3,17 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Client\AllController;
+use App\Http\Controllers\Client\AllGuatemalaController;
 use App\Http\Controllers\Client\CompleteController;
 use App\Http\Controllers\Client\AllHondurasController;
 use App\Http\Controllers\Client\AllParaguayController;
 use App\Http\Controllers\Client\AllSalvadorController;
+use App\Http\Controllers\Client\CompleteGuatemalaController;
 use App\Http\Controllers\Client\IncrementalController;
 use App\Http\Controllers\Client\CompleteHondurasController;
 use App\Http\Controllers\Client\CompleteParaguayController;
 use App\Http\Controllers\Client\CompleteSalvadorController;
+use App\Http\Controllers\Client\IncrementalGuatemalaController;
 use App\Http\Controllers\Client\IncrementalHondurasController;
 use App\Http\Controllers\Client\IncrementalParaguayController;
 use App\Http\Controllers\Client\IncrementalSalvadorController;
@@ -44,3 +47,10 @@ Route::get('incremental-paraguay', [IncrementalParaguayController::class, 'index
 Route::get('complete-paraguay', [CompleteParaguayController::class, 'index'])->middleware('can:Descargar completa paraguay')->name('complete.paraguay.index');
 
 Route::get('all-paraguay/{id}', [AllParaguayController::class, 'show'])->name('all.paraguay.show');
+
+//Guatemala
+Route::get('incremental-guatemala', [IncrementalGuatemalaController::class, 'index'])->middleware('can:Descargar incremental guatemala')->name('incremental.guatemala.index');
+
+Route::get('complete-guatemala', [CompleteGuatemalaController::class, 'index'])->middleware('can:Descargar completa guatemala')->name('complete.guatemala.index');
+
+Route::get('all-guatemala/{id}', [AllGuatemalaController::class, 'show'])->name('all.guatemala.show');

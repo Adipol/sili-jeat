@@ -2,12 +2,14 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AllController;
+use App\Http\Controllers\AllGuatemalaController;
 use App\Http\Controllers\AllHondurasController;
 use App\Http\Controllers\AllParaguayController;
 use App\Http\Controllers\AllSalvadorController;
 use App\Http\Controllers\Supplier\OtherController;
 use App\Http\Controllers\Supplier\ImportController;
 use App\Http\Controllers\Supplier\ConsultController;
+use App\Http\Controllers\Supplier\ConsultGuatemalaController;
 use App\Http\Controllers\Supplier\IncrementalController;
 use App\Http\Controllers\Supplier\ImportHondurasController;
 use App\Http\Controllers\Supplier\ImportParaguayController;
@@ -15,6 +17,8 @@ use App\Http\Controllers\Supplier\ImportSalvadorController;
 use App\Http\Controllers\Supplier\ConsultHondurasController;
 use App\Http\Controllers\Supplier\ConsultParaguayController;
 use App\Http\Controllers\Supplier\ConsultSalvadorController;
+use App\Http\Controllers\Supplier\ImportGuatemalaController;
+use App\Http\Controllers\Supplier\IncrementalGuatemalaController;
 use App\Http\Controllers\Supplier\IncrementalHondurasController;
 use App\Http\Controllers\Supplier\IncrementalParaguayController;
 use App\Http\Controllers\Supplier\IncrementalSalvadorController;
@@ -69,3 +73,15 @@ Route::get('incremental-paraguay', [IncrementalParaguayController::class, 'index
 Route::get('paraguay-all', [AllParaguayController::class, 'index'])->middleware('can:Cargar completa paraguay')->name('supplier.paraguay.all.index');
 
 Route::get('consults-paraguay', [ConsultParaguayController::class, 'index'])->name('consults.paraguay.index');
+
+//Para Guatemala
+
+Route::get('import-guatemala', [ImportGuatemalaController::class, 'index'])->middleware('can:Importar bd guatemala')->name('import.guatemala.index');
+
+Route::post('importGuatemalaExcel', [ImportGuatemalaController::class, 'importExcel'])->name('importExcel.guatemala');
+
+Route::get('incremental-guatemala', [IncrementalGuatemalaController::class, 'index'])->middleware('can:Cargar incremental guatemala')->name('supplier.incremental.guatemala.index');
+
+Route::get('guatemala-all', [AllGuatemalaController::class, 'index'])->middleware('can:Cargar completa guatemala')->name('supplier.guatemala.all.index');
+
+Route::get('consults-guatemala', [ConsultGuatemalaController::class, 'index'])->name('consults.guatemala.index');

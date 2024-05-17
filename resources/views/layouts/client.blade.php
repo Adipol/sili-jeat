@@ -69,6 +69,15 @@ border-transparent @endif">
                         </li>
                     @endcan
 
+                    @can('Descargar incremental guatemala')
+                        <li
+                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('incremental.guatemala.index')border-yellow-500
+@else
+border-transparent @endif">
+                            <a href="{{ route('incremental.guatemala.index') }}">Incremental (Guatemala)</a>
+                        </li>
+                    @endcan
+
                     @can('Descargar completa')
                         <li
                             class="pl-2 mb-1 leading-7 border-l-4 @routeIs('complete.index')border-yellow-500
@@ -102,6 +111,15 @@ border-transparent @endif">
 @else
 border-transparent @endif">
                             <a href="{{ route('complete.paraguay.index') }}">Completa (Paraguay)</a>
+                        </li>
+                    @endcan
+
+                    @can('Descargar completa guatemala')
+                        <li
+                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('complete.guatemala.index')border-yellow-500
+@else
+border-transparent @endif">
+                            <a href="{{ route('complete.guatemala.index') }}">Completa (Guatemala)</a>
                         </li>
                     @endcan
 

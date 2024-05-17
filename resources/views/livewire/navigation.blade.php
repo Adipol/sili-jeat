@@ -1,18 +1,18 @@
 @php
-$nav_links = [
-    [
-        'name' => 'Consultas',
-        'route' => route('consults.index'),
-    ],
-    [
-        'name' => 'Descargar Información',
-        'route' => route('incremental.index'),
-    ],
-    [
-        'name' => 'Cargar Información',
-        'route' => route('import.index'),
-    ],
-];
+    $nav_links = [
+        [
+            'name' => 'Consultas',
+            'route' => route('consults.index'),
+        ],
+        [
+            'name' => 'Descargar Información',
+            'route' => route('incremental.index'),
+        ],
+        [
+            'name' => 'Cargar Información',
+            'route' => route('import.index'),
+        ],
+    ];
 @endphp
 
 <nav class="bg-blue-900 " x-data="{ open: false }">
@@ -72,6 +72,12 @@ $nav_links = [
                                     (Paraguay)</a>
                             @endcan
 
+                            @can('Buscar guatemala')
+                                <a href="{{ route('consults.guatemala.index') }}"
+                                    class="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-blue-700 hover:text-white">Consultas
+                                    (Guatemala)</a>
+                            @endcan
+
                             @can('Descargar listas')
                                 <a href="{{ route('incremental.index') }}"
                                     class="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-blue-700 hover:text-white">Descargar
@@ -125,8 +131,7 @@ $nav_links = [
                             class="z-0 flex text-sm bg-gray-800 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
                             id="user-menu" aria-expanded="false" aria-haspopup="true">
                             <span class="sr-only">Open user menu</span>
-                            <img class="w-8 h-8 rounded-full" src="{{ auth()->user()->profile_photo_url }}"
-                                alt="">
+                            <img class="w-8 h-8 rounded-full" src="{{ auth()->user()->profile_photo_url }}" alt="">
                         </button>
                         <div x-show="open" x-on:click.away="open=false"
                             class="absolute right-0 z-20 w-48 py-1 mt-2 origin-top-right bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
@@ -188,6 +193,12 @@ $nav_links = [
                     (Paraguay)</a>
             @endcan
 
+            @can('Buscar guatemala')
+                <a href="{{ route('consults.guatemala.index') }}"
+                    class="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-blue-700 hover:text-white">Consultas
+                    (Guatemala)</a>
+            @endcan
+
             @can('Descargar listas')
                 <a href="{{ route('incremental.index') }}"
                     class="block px-3 py-2 text-base font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
@@ -211,6 +222,7 @@ $nav_links = [
                     class="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-blue-700 hover:text-white">Descargar
                     Información (Paraguay)</a>
             @endcan
+
 
             @can('Cargar listas')
                 <a href="{{ route('import.index') }}"

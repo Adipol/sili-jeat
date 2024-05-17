@@ -18,7 +18,6 @@
         table {
             font-family: 'BrixSansRegular';
             font-size: 10pt;
-
         }
 
         .h2 {
@@ -105,7 +104,6 @@
             width: 100%;
         }
 
-
         .datos_cliente {
             padding: 10px 50px 0 20px;
             width: 100%;
@@ -162,27 +160,6 @@
         .nota {
             font-size: 8pt;
         }
-
-        #you {
-            font-family: Arial, Helvetica, sans-serif;
-            border-collapse: collapse;
-            width: 100;
-            font-size: 9pt;
-        }
-
-        #you td,
-        #you th {
-            border: 1px solid #ddd;
-            padding: 8px;
-        }
-
-        #yout th {
-            padding-top: 12px;
-            padding-bottom: 12px;
-            text-align: left;
-            background-color: #4CAF50;
-            color: #fff
-        }
     </style>
 </head>
 
@@ -198,6 +175,7 @@
                 <td class="info_empresa">
                     <div>
                         <span class="h2">AMLC - Listas de control</span>
+                        <span class="h4">(GUATEMALA)</span>
                         <span class="h4">REPORTE DE CONSULTA</span>
                     </div>
                 </td>
@@ -228,8 +206,7 @@
                             </tr>
                             <tr>
                                 <td> <label>Primer Apellido: </label></td>
-                                <td><input type="text" name="" value="{{ $pep->last_name_one }}"></input>
-                                </td>
+                                <td><input type="text" name="" value="{{ $pep->last_name_one }}"></input></td>
                             </tr>
                             <tr>
                                 <td><label>Segundo Apellido: </label></td>
@@ -237,8 +214,17 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td><label>País: </label></td>
-                                <td><input type="text" name="" value="{{ $pep->country }}"></input></td>
+                                <td><label>Tipo de Documento: </label> </td>
+                                <td> <input type="text" name="" value="{{ $pep->type_document }}"></input>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label>Numero de Documento: </label></td>
+                                <td><input type="text" name="" value="{{ $pep->nro_document }}"></input></td>
+                            </tr>
+                            <tr>
+                                <td><label>Tipo de Lista: </label> </td>
+                                <td><input type="text" name="" value="{{ $pep->code }}"></input></td>
                             </tr>
                             <tr>
                                 <td><label>Cargo: </label></td>
@@ -252,81 +238,12 @@
                                 <td><label>Gestión: </label></td>
                                 <td><input type="text" name="" value="{{ $pep->management }}"></input></td>
                             </tr>
-                        </table>
-                    </div>
-                </td>
-            </tr>
-        </table>
-        <table id="pep">
-            <tr>
-                <td class="info_cliente">
-                    <div class="round1">
-                        <span class="h3">Allegados</span>
-                        <table class="you" style="border:1px solid black;margin-left:auto;margin-right:auto;"
-                            border="1">
-                            <thead>
-                                <tr>
-                                    <th>
-                                        Primer nombre
-                                    </th>
-                                    <th>
-                                        Segundo nombre
-                                    </th>
-                                    <th>
-                                        Primer Apellido
-                                    </th>
-                                    <th>
-                                        Segundo Apellido
-                                    </th>
-                                    <th>
-                                        Documento
-                                    </th>
-                                    <th>
-                                        Número
-                                    </th>
-                                    <th>
-                                        Extensión
-                                    </th>
-                                    {{-- <th>
-                                        Tipo allegado
-                                    </th> --}}
-                                    <th>
-                                        Detalle
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ($all as $one)
-                                    <tr>
-                                        <td>
-                                            {{ $one->name_one }}
-                                        </td>
-                                        <td>
-                                            {{ $one->name_two }}
-                                        </td>
-                                        <td>
-                                            {{ $one->last_name_one }}
-                                        </td>
-                                        <td>
-                                            {{ $one->last_name_two }}
-                                        </td>
-                                        <td>
-                                            {{ $one->type_document }}
-                                        <td>
-                                            {{ $one->nro_document }}
-                                        </td>
-                                        <td>
-                                            {{ $one->extension }}
-                                        </td>
-                                        {{-- <td>
-                                            {{ $one->type_fam }}
-                                        </td> --}}
-                                        <td>
-                                            {{ $one->detail }}
-                                        </td>
-                                    </tr>
-                                @endforeach
-                            </tbody>
+                            <tr>
+                                <td><label>Justificacion: </label></td>
+                                <td>
+                                    <textarea type="text" name="" rows="5">{{ $pep->justification }}</textarea>
+                                </td>
+                            </tr>
                         </table>
                     </div>
                 </td>
