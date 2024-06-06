@@ -102,6 +102,12 @@
                                     Información (Paraguay)</a>
                             @endcan
 
+                            @can('Descargar listas guatemala')
+                                <a href="{{ route('incremental.guatemala.index') }}"
+                                    class="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-blue-700 hover:text-white">Descargar
+                                    Información (Guatemala)</a>
+                            @endcan
+
                             @can('Cargar listas')
                                 <a href="{{ route('import.index') }}"
                                     class="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-blue-700 hover:text-white">Cargar
@@ -223,6 +229,11 @@
                     Información (Paraguay)</a>
             @endcan
 
+            @can('Descargar listas guatemala')
+                <a href="{{ route('incremental.guatemala.index') }}"
+                    class="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-blue-700 hover:text-white">Descargar
+                    Información (Guatemala)</a>
+            @endcan
 
             @can('Cargar listas')
                 <a href="{{ route('import.index') }}"
