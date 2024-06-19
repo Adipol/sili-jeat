@@ -11,7 +11,7 @@ use Livewire\Component;
 
 class AllDownloadParaguay extends Component
 {
-    public $download_all;
+    public $download_all_p;
 
     public $code = ['ASO-PEP', 'FBI', 'F-PEP', 'GAFI', 'INTERPOL', 'OFAC', 'ONU', 'OPI', 'PEP-EX', 'PEP-NAL', 'UE', 'PF-UE', 'ENGEL', 'UK'];
     public $colors = [
@@ -31,11 +31,11 @@ class AllDownloadParaguay extends Component
         'UK' => '#008000',
     ];
 
-    public $firstRun = true;
+    public $firstRun_p = true;
 
-    public function mount(ParaguayWhole $download_all)
+    public function mount(ParaguayWhole $download_all_p)
     {
-        $this->download_all = $download_all;
+        $this->download_all_p = $download_all_p;
     }
 
     public function render()
@@ -50,7 +50,7 @@ class AllDownloadParaguay extends Component
                 },
                 (new ColumnChartModel())
                     ->setTitle('Cantidad por código')
-                    ->setAnimated($this->firstRun)
+                    ->setAnimated($this->firstRun_p)
                     ->withOnColumnClickEventName('onColumnClick')
             );
         $pieChartModel = $expenses->groupBy('code')
@@ -62,11 +62,11 @@ class AllDownloadParaguay extends Component
                 },
                 (new PieChartModel())
                     ->setTitle('Cantidad por código')
-                    ->setAnimated($this->firstRun)
+                    ->setAnimated($this->firstRun_p)
                     ->withOnSliceClickEvent('onSliceClick')
             );
 
-        $this->firstRun = false;
+        $this->firstRun_p = false;
 
         return view('livewire.client.all-download-paraguay')->with([
             'columnChartModel' => $columnChartModel,
@@ -76,8 +76,8 @@ class AllDownloadParaguay extends Component
 
     public function download_xlsx()
     {
-        if ($this->download_all->link_xlsx) {
-            return Storage::download($this->download_all->link_xlsx);
+        if ($this->download_all_p->link_xlsx) {
+            return Storage::download($this->download_all_p->link_xlsx);
             //return  response()->download(storage_path('app/public/' . $this->download_all->link_xlsx));
         } else {
         }
@@ -85,8 +85,8 @@ class AllDownloadParaguay extends Component
 
     public function download_csv()
     {
-        if ($this->download_all->link_csv) {
-            return Storage::download($this->download_all->link_csv);
+        if ($this->download_all_p->link_csv) {
+            return Storage::download($this->download_all_p->link_csv);
             //return  response()->download(storage_path('app/public/' . $this->download_all->link_csv));
         } else {
         }

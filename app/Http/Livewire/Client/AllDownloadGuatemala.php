@@ -11,7 +11,7 @@ use Livewire\Component;
 
 class AllDownloadGuatemala extends Component
 {
-    public $download_all;
+    public $download_all_g;
 
     public $code = ['ASO-PEP', 'FBI', 'F-PEP', 'GAFI', 'INTERPOL', 'OFAC', 'ONU', 'OPI', 'PEP-EX', 'PEP-NAL', 'UE', 'PF-UE', 'ENGEL', 'UK'];
     public $colors = [
@@ -31,11 +31,11 @@ class AllDownloadGuatemala extends Component
         'UK' => '#008000',
     ];
 
-    public $firstRun = true;
+    public $firstRun_g = true;
 
-    public function mount(GuatemalaWhole $download_all)
+    public function mount(GuatemalaWhole $download_all_g)
     {
-        $this->download_all = $download_all;
+        $this->download_all_g = $download_all_g;
     }
 
     public function render()
@@ -50,7 +50,7 @@ class AllDownloadGuatemala extends Component
                 },
                 (new ColumnChartModel())
                     ->setTitle('Cantidad por código')
-                    ->setAnimated($this->firstRun)
+                    ->setAnimated($this->firstRun_g)
                     ->withOnColumnClickEventName('onColumnClick')
             );
         $pieChartModel = $expenses->groupBy('code')
@@ -62,11 +62,11 @@ class AllDownloadGuatemala extends Component
                 },
                 (new PieChartModel())
                     ->setTitle('Cantidad por código')
-                    ->setAnimated($this->firstRun)
+                    ->setAnimated($this->firstRun_g)
                     ->withOnSliceClickEvent('onSliceClick')
             );
 
-        $this->firstRun = false;
+        $this->firstRun_g = false;
 
         return view('livewire.client.all-download-guatemala')->with([
             'columnChartModel' => $columnChartModel,
@@ -76,8 +76,8 @@ class AllDownloadGuatemala extends Component
 
     public function download_xlsx()
     {
-        if ($this->download_all->link_xlsx) {
-            return Storage::download($this->download_all->link_xlsx);
+        if ($this->download_all_g->link_xlsx) {
+            return Storage::download($this->download_all_g->link_xlsx);
             //return  response()->download(storage_path('app/public/' . $this->download_all->link_xlsx));
         } else {
         }
@@ -85,8 +85,8 @@ class AllDownloadGuatemala extends Component
 
     public function download_csv()
     {
-        if ($this->download_all->link_csv) {
-            return Storage::download($this->download_all->link_csv);
+        if ($this->download_all_g->link_csv) {
+            return Storage::download($this->download_all_g->link_csv);
             //return  response()->download(storage_path('app/public/' . $this->download_all->link_csv));
         } else {
         }
