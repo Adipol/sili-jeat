@@ -20,11 +20,13 @@ class ShowConsult extends Component
 
     public function render()
     {
-        $peps = Control::Where(DB::raw('CONCAT_WS(" ",name_one, name_two)'), 'like', '%' . $this->search . '%')
-            ->where(function ($query) {
-                $query->Where(DB::raw('CONCAT_WS(" ",last_name_one, last_name_two)'), 'like', '%' . $this->search1 . '%');
+        $peps = Control::where(function ($query) {
+            $query->where(DB::raw('CONCAT_WS(" ", name_one, name_two)'), 'like', '%' . $this->search . '%')
+                ->where(DB::raw('CONCAT_WS(" ", last_name_one, last_name_two)'), 'like', '%' . $this->search1 . '%');
+        })
+            ->orWhere(function ($query) {
+                $query->where('nro_document', $this->search);
             })
-            ->orWhere('nro_document', $this->search)
             ->orderBy($this->sort, $this->direction)
             ->paginate(10);
 
