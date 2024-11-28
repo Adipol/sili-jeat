@@ -28,6 +28,7 @@ class Incremental extends Component
         $new_pf_ue, $update_pf_ue,
         $new_engel, $update_engel,
         $new_uk, $update_uk,
+        $new_europol, $update_europol,
         $description_one;
 
     public function render()
@@ -79,6 +80,8 @@ class Incremental extends Component
             'engel_upgrade' => $this->update_engel,
             'uk_new' => $this->new_uk,
             'uk_upgrade' => $this->update_uk,
+            'europol_new' => $this->new_europol,
+            'europol_upgrade' => $this->update_europol,
             'description' => $this->description_one
         ]);
     }

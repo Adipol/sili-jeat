@@ -47,6 +47,8 @@ class IncrementalOriginalCsvParaguay extends Component
         'control.engel_upgrade' => 'required',
         'control.uk_new' => 'required',
         'control.uk_upgrade' => 'required',
+        'control.europol_new' => 'required',
+        'control.europol_upgrade' => 'required',
         'control.description' => 'required',
     ];
     public function mount(ParaguayImport $control)

@@ -246,7 +246,7 @@
                             <div class="col-span-6 sm:col-span-3">
                                 <label for="new_uk" class="block text-sm font-medium text-gray-700">Nuevo
                                     UK</label>
-                                <input type="number" name="new_uk" id="new_engel" autocomplete="given-name"
+                                <input type="number" name="new_uk" id="new_uk" autocomplete="given-name"
                                     wire:model="new_uk"
                                     class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                             </div>
@@ -255,6 +255,21 @@
                                     UK</label>
                                 <input type="number" name="update_uk" id="update_uk" autocomplete="given-name"
                                     wire:model="update_uk"
+                                    class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                            </div>
+                            <div class="col-span-6 sm:col-span-3">
+                                <label for="new_europol" class="block text-sm font-medium text-gray-700">Nuevo
+                                    EUROPOL</label>
+                                <input type="number" name="new_europol" id="new_europol" autocomplete="given-name"
+                                    wire:model="new_europol"
+                                    class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                            </div>
+                            <div class="col-span-6 sm:col-span-3">
+                                <label for="update_europol"
+                                    class="block text-sm font-medium text-gray-700">Actualización
+                                    EUROPOL</label>
+                                <input type="number" name="update_europol" id="update_europol"
+                                    autocomplete="given-name" wire:model="update_europol"
                                     class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                             </div>
                         </div>
