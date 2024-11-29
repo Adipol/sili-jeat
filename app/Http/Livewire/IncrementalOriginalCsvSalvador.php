@@ -49,6 +49,8 @@ class IncrementalOriginalCsvSalvador extends Component
         'control.uk_upgrade' => 'required',
         'control.europol_new' => 'required',
         'control.europol_upgrade' => 'required',
+        'control.canadienses_new' => 'required',
+        'control.canadienses_upgrade' => 'required',
         'control.description' => 'required',
     ];
 

@@ -29,7 +29,8 @@ class AllDownloadParaguay extends Component
         'PF-UE' => '#1687f8',
         'ENGEL' => '#9400D3',
         'UK' => '#008000',
-        'EUROPOL' => '#ff9900'
+        'EUROPOL' => '#ff9900',
+        'CANADIENSES' => '#FF69B4'
     ];
 
     public $firstRun_p = true;

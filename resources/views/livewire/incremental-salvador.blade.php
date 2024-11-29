@@ -241,6 +241,21 @@
                                     autocomplete="given-name" wire:model="update_europol"
                                     class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                             </div>
+                            <div class="col-span-6 sm:col-span-3">
+                                <label for="new_canadienses" class="block text-sm font-medium text-gray-700">Nuevo
+                                    CANADIENSES</label>
+                                <input type="number" name="new_canadienses" id="new_canadienses"
+                                    autocomplete="given-name" wire:model="new_canadienses"
+                                    class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                            </div>
+                            <div class="col-span-6 sm:col-span-3">
+                                <label for="update_canadienses"
+                                    class="block text-sm font-medium text-gray-700">Actualización
+                                    CANADIENSES</label>
+                                <input type="number" name="update_canadienses" id="update_canadienses"
+                                    autocomplete="given-name" wire:model="update_canadienses"
+                                    class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                            </div>
                         </div>
                         <div class="col-span-6 mt-5">
                             <label for="about" class="block text-sm font-medium text-gray-700">

@@ -162,6 +162,17 @@
                     <x-jet-input wire:model="control.europol_upgrade" type="text" class="block w-full" readonly />
                 </div>
             </div>
+            <div class="grid grid-cols-6 gap-6 mb-4">
+                <div class="col-span-6 sm:col-span-3">
+                    <x-jet-label value="Nuevo CANADIENSES" />
+                    <x-jet-input wire:model="control.canadienses_new" type="text" class="block w-full" readonly />
+                </div>
+                <div class="col-span-6 sm:col-span-3">
+                    <x-jet-label value="Actualización CANADIENSES" />
+                    <x-jet-input wire:model="control.canadienses_upgrade" type="text" class="block w-full"
+                        readonly />
+                </div>
+            </div>
             <div class="col-span-6 mt-5 mb-4">
                 <label for="about" class="block text-sm font-medium text-gray-700">
                     Observaciones
