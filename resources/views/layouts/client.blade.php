@@ -123,6 +123,23 @@ border-transparent @endif">
                         </li>
                     @endcan
 
+                    @can('Descargar gafi')
+                        <li
+                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('gafi.index')border-yellow-500
+@else
+border-transparent @endif">
+                            <a href="{{ route('gafi.index') }}">Paraísos Fiscales (GAFI)</a>
+                        </li>
+                    @endcan
+
+                    @can('Descargar ue')
+                        <li
+                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('ue.index')border-yellow-500
+@else
+border-transparent @endif">
+                            <a href="{{ route('ue.index') }}">Paraísos Fiscales (UE)</a>
+                        </li>
+                    @endcan
                 </ul>
             </aside>
             <div class="col-span-4 card">
