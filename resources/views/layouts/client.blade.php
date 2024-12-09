@@ -35,109 +35,109 @@
 
                     @can('Descargar incremental')
                         <li
-                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('incremental.index')border-yellow-500
+                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('incremental.index') border-yellow-500 text-yellow-500 font-bold bg-yellow-50
 @else
-border-transparent @endif">
-                            <a href="{{ route('incremental.index') }}">Incremental</a>
+border-transparent text-gray-600 hover:text-yellow-500 hover:bg-yellow-50 @endif">
+                            <a href="{{ route('incremental.index') }}" class="block">Incremental</a>
                         </li>
                     @endcan
 
                     @can('Descargar incremental honduras')
                         <li
-                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('incremental.honduras.index')border-yellow-500
+                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('incremental.honduras.index') border-yellow-500 text-yellow-500 font-bold bg-yellow-50
 @else
-border-transparent @endif">
-                            <a href="{{ route('incremental.honduras.index') }}">Incremental (Honduras)</a>
+border-transparent text-gray-600 hover:text-yellow-500 hover:bg-yellow-50 @endif">
+                            <a href="{{ route('incremental.honduras.index') }}" class="block">Incremental (Honduras)</a>
                         </li>
                     @endcan
 
                     @can('Descargar incremental el salvador')
                         <li
-                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('incremental.salvador.index')border-yellow-500
+                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('incremental.salvador.index') border-yellow-500 text-yellow-500 font-bold bg-yellow-50
 @else
-border-transparent @endif">
-                            <a href="{{ route('incremental.salvador.index') }}">Incremental (El salvador)</a>
+border-transparent text-gray-600 hover:text-yellow-500 hover:bg-yellow-50 @endif">
+                            <a href="{{ route('incremental.salvador.index') }}" class="block">Incremental (El Salvador)</a>
                         </li>
                     @endcan
 
                     @can('Descargar incremental paraguay')
                         <li
-                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('incremental.paraguay.index')border-yellow-500
+                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('incremental.paraguay.index') border-yellow-500 text-yellow-500 font-bold bg-yellow-50
 @else
-border-transparent @endif">
-                            <a href="{{ route('incremental.paraguay.index') }}">Incremental (Paraguay)</a>
+border-transparent text-gray-600 hover:text-yellow-500 hover:bg-yellow-50 @endif">
+                            <a href="{{ route('incremental.paraguay.index') }}" class="block">Incremental (Paraguay)</a>
                         </li>
                     @endcan
 
                     @can('Descargar incremental guatemala')
                         <li
-                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('incremental.guatemala.index')border-yellow-500
+                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('incremental.guatemala.index') border-yellow-500 text-yellow-500 font-bold bg-yellow-50
 @else
-border-transparent @endif">
-                            <a href="{{ route('incremental.guatemala.index') }}">Incremental (Guatemala)</a>
+border-transparent text-gray-600 hover:text-yellow-500 hover:bg-yellow-50 @endif">
+                            <a href="{{ route('incremental.guatemala.index') }}" class="block">Incremental (Guatemala)</a>
                         </li>
                     @endcan
 
                     @can('Descargar completa')
                         <li
-                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('complete.index')border-yellow-500
+                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('complete.index') border-yellow-500 text-yellow-500 font-bold bg-yellow-50
 @else
-border-transparent @endif">
-                            <a href="{{ route('complete.index') }}">Completa</a>
+border-transparent text-gray-600 hover:text-yellow-500 hover:bg-yellow-50 @endif">
+                            <a href="{{ route('complete.index') }}" class="block">Completa</a>
                         </li>
                     @endcan
 
                     @can('Descargar completa honduras')
                         <li
-                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('complete.honduras.index')border-yellow-500
+                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('complete.honduras.index') border-yellow-500 text-yellow-500 font-bold bg-yellow-50
 @else
-border-transparent @endif">
-                            <a href="{{ route('complete.honduras.index') }}">Completa (Honduras)</a>
+border-transparent text-gray-600 hover:text-yellow-500 hover:bg-yellow-50 @endif">
+                            <a href="{{ route('complete.honduras.index') }}" class="block">Completa (Honduras)</a>
                         </li>
                     @endcan
 
                     @can('Descargar completa el salvador')
                         <li
-                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('complete.salvador.index')border-yellow-500
+                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('complete.salvador.index') border-yellow-500 text-yellow-500 font-bold bg-yellow-50
 @else
-border-transparent @endif">
-                            <a href="{{ route('complete.salvador.index') }}">Completa (El salvador)</a>
+border-transparent text-gray-600 hover:text-yellow-500 hover:bg-yellow-50 @endif">
+                            <a href="{{ route('complete.salvador.index') }}" class="block">Completa (El Salvador)</a>
                         </li>
                     @endcan
 
                     @can('Descargar completa paraguay')
                         <li
-                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('complete.paraguay.index')border-yellow-500
+                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('complete.paraguay.index') border-yellow-500 text-yellow-500 font-bold bg-yellow-50
 @else
-border-transparent @endif">
-                            <a href="{{ route('complete.paraguay.index') }}">Completa (Paraguay)</a>
+border-transparent text-gray-600 hover:text-yellow-500 hover:bg-yellow-50 @endif">
+                            <a href="{{ route('complete.paraguay.index') }}" class="block">Completa (Paraguay)</a>
                         </li>
                     @endcan
 
                     @can('Descargar completa guatemala')
                         <li
-                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('complete.guatemala.index')border-yellow-500
+                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('complete.guatemala.index') border-yellow-500 text-yellow-500 font-bold bg-yellow-50
 @else
-border-transparent @endif">
-                            <a href="{{ route('complete.guatemala.index') }}">Completa (Guatemala)</a>
+border-transparent text-gray-600 hover:text-yellow-500 hover:bg-yellow-50 @endif">
+                            <a href="{{ route('complete.guatemala.index') }}" class="block">Completa (Guatemala)</a>
                         </li>
                     @endcan
 
                     @can('Descargar gafi')
                         <li
-                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('gafi.index')border-yellow-500
+                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('gafi.index') border-yellow-500 text-yellow-500 font-bold bg-yellow-50
 @else
-border-transparent @endif">
-                            <a href="{{ route('gafi.index') }}">Paraísos Fiscales (GAFI)</a>
+border-transparent text-gray-600 hover:text-yellow-500 hover:bg-yellow-50 @endif">
+                            <a href="{{ route('gafi.index') }}" class="block">Paraísos Fiscales (GAFI)</a>
                         </li>
                     @endcan
 
                     @can('Descargar ue')
                         <li
-                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('ue.index')border-yellow-500
+                            class="pl-2 mb-1 leading-7 border-l-4 @routeIs('ue.index') border-yellow-500 text-yellow-500 font-bold bg-yellow-50
 @else
-border-transparent @endif">
-                            <a href="{{ route('ue.index') }}">Paraísos Fiscales (UE)</a>
+border-transparent text-gray-600 hover:text-yellow-500 hover:bg-yellow-50 @endif">
+                            <a href="{{ route('ue.index') }}" class="block">Paraísos Fiscales (UE)</a>
                         </li>
                     @endcan
                 </ul>
