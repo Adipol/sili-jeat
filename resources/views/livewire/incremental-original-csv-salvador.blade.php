@@ -112,26 +112,6 @@
                     <x-jet-input wire:model="control.pep_nal_upgrade" type="text" class="block w-full" readonly />
                 </div>
             </div>
-            {{-- <div class="grid grid-cols-6 gap-6 mb-4">
-                <div class="col-span-6 sm:col-span-3">
-                    <x-jet-label value="Nuevo PEPU-EX" />
-                    <x-jet-input wire:model="control.pepu_ex_new" type="text" class="block w-full" readonly />
-                </div>
-                <div class="col-span-6 sm:col-span-3">
-                    <x-jet-label value="Actualización PEPU-EX" />
-                    <x-jet-input wire:model="control.pepu_ex_upgrade" type="text" class="block w-full" readonly />
-                </div>
-            </div>
-            <div class="grid grid-cols-6 gap-6 mb-4">
-                <div class="col-span-6 sm:col-span-3">
-                    <x-jet-label value="Nuevo PEPU-NAL" />
-                    <x-jet-input wire:model="control.pepu_nal_new" type="text" class="block w-full" readonly />
-                </div>
-                <div class="col-span-6 sm:col-span-3">
-                    <x-jet-label value="Actualización PEPU-NAL" />
-                    <x-jet-input wire:model="control.pepu_nal_upgrade" type="text" class="block w-full" readonly />
-                </div>
-            </div> --}}
             <div class="grid grid-cols-6 gap-6 mb-4">
                 <div class="col-span-6 sm:col-span-3">
                     <x-jet-label value="Nuevo UE" />
@@ -190,6 +170,17 @@
                 <div class="col-span-6 sm:col-span-3">
                     <x-jet-label value="Actualización CANADIENSES" />
                     <x-jet-input wire:model="control.canadienses_upgrade" type="text" class="block w-full"
+                        readonly />
+                </div>
+            </div>
+            <div class="grid grid-cols-6 gap-6 mb-4">
+                <div class="col-span-6 sm:col-span-3">
+                    <x-jet-label value="Nuevo EXP" />
+                    <x-jet-input wire:model="control.ex_peps_new" type="text" class="block w-full" readonly />
+                </div>
+                <div class="col-span-6 sm:col-span-3">
+                    <x-jet-label value="Actualización EXP" />
+                    <x-jet-input wire:model="control.ex_peps_upgrade" type="text" class="block w-full"
                         readonly />
                 </div>
             </div>

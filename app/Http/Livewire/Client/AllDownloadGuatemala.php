@@ -13,7 +13,7 @@ class AllDownloadGuatemala extends Component
 {
     public $download_all_g;
 
-    public $code = ['ASO-PEP', 'FBI', 'F-PEP', 'GAFI', 'INTERPOL', 'OFAC', 'ONU', 'OPI', 'PEP-EX', 'PEP-NAL', 'UE', 'PF-UE', 'ENGEL', 'UK', 'EUROPOL', 'CANADIENSES'];
+    public $code = ['ASO-PEP', 'FBI', 'F-PEP', 'GAFI', 'INTERPOL', 'OFAC', 'ONU', 'OPI', 'PEP-EX', 'PEP-NAL', 'UE', 'PF-UE', 'ENGEL', 'UK', 'EUROPOL', 'CANADIENSES', 'EXP'];
     public $colors = [
         'ASO-PEP' => '#6a5bcdb8',
         'FBI' => '#708090',
@@ -30,7 +30,8 @@ class AllDownloadGuatemala extends Component
         'ENGEL' => '#9400D3',
         'UK' => '#008000',
         'EUROPOL' => '#ff9900',
-        'CANADIENSES' => '#FF69B4'
+        'CANADIENSES' => '#FF69B4',
+        'EXP' => '#00FFFF'
     ];
 
     public $firstRun_g = true;

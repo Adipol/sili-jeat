@@ -51,7 +51,9 @@ class IncrementalOriginalCsvHonduras extends Component
         'control.europol_upgrade' => 'required',
         'control.canadienses_new' => 'required',
         'control.canadienses_upgrade' => 'required',
-        'control.description' => 'required',
+        'control.ex_peps_new' => 'required',
+        'control.ex_peps_upgrade' => 'required',
+        'control.description' => 'required'
     ];
     public function mount(HondurasImport $control)
     {

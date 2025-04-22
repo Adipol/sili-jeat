@@ -30,6 +30,7 @@ class IncrementalSalvador extends Component
         $new_uk, $update_uk,
         $new_europol, $update_europol,
         $new_canadienses, $update_canadienses,
+        $new_ex_peps, $update_ex_peps,
         $description_one;
 
     public function render()
@@ -85,6 +86,8 @@ class IncrementalSalvador extends Component
             'europol_upgrade' => $this->update_europol,
             'canadienses_new' => $this->new_canadienses,
             'canadienses_upgrade' => $this->update_canadienses,
+            'ex_peps_new' => $this->new_ex_peps,
+            'ex_peps_upgrade' => $this->update_ex_peps,
             'description' => $this->description_one
         ]);
     }

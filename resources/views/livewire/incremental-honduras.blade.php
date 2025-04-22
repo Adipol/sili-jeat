@@ -168,36 +168,6 @@
                                     autocomplete="given-name" wire:model="update_pep_nal"
                                     class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                             </div>
-                            {{-- <div class="col-span-6 sm:col-span-3">
-                                <label for="new_pepu_ex" class="block text-sm font-medium text-gray-700">Nuevo
-                                    PEPU-EX</label>
-                                <input type="number" name="new_pepu_ex" id="new_pepu_ex" autocomplete="given-name"
-                                    wire:model="new_pepu_ex"
-                                    class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
-                            </div>
-                            <div class="col-span-6 sm:col-span-3">
-                                <label for="update_pepu_ex"
-                                    class="block text-sm font-medium text-gray-700">Actualización
-                                    PEPU-EX</label>
-                                <input type="number" name="update_pepu_ex" id="update_pepu_ex" autocomplete="given-name"
-                                    wire:model="update_pepu_ex"
-                                    class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
-                            </div>
-                            <div class="col-span-6 sm:col-span-3">
-                                <label for="new_pepu_nal" class="block text-sm font-medium text-gray-700">Nuevo
-                                    PEPU-NAL</label>
-                                <input type="number" name="new_pepu_nal" id="new_pepu_nal" autocomplete="given-name"
-                                    wire:model="new_pepu_nal"
-                                    class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
-                            </div>
-                            <div class="col-span-6 sm:col-span-3">
-                                <label for="update_pepu_nal"
-                                    class="block text-sm font-medium text-gray-700">Actualización
-                                    PEPU-NAL</label>
-                                <input type="number" name="update_pepu_nal" id="update_pepu_nal"
-                                    autocomplete="given-name" wire:model="update_pepu_nal"
-                                    class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
-                            </div> --}}
                             <div class="col-span-6 sm:col-span-3">
                                 <label for="new_ue" class="block text-sm font-medium text-gray-700">Nuevo
                                     UE</label>
@@ -285,6 +255,21 @@
                                     CANADIENSES</label>
                                 <input type="number" name="update_canadienses" id="update_canadienses"
                                     autocomplete="given-name" wire:model="update_canadienses"
+                                    class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                            </div>
+                            <div class="col-span-6 sm:col-span-3">
+                                <label for="new_ex_peps" class="block text-sm font-medium text-gray-700">Nuevo
+                                    EXP</label>
+                                <input type="number" name="new_ex_peps" id="new_ex_peps"
+                                    autocomplete="given-name" wire:model="new_ex_peps"
+                                    class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                            </div>
+                            <div class="col-span-6 sm:col-span-3">
+                                <label for="update_ex_peps"
+                                    class="block text-sm font-medium text-gray-700">Actualización
+                                    EXP</label>
+                                <input type="number" name="update_ex_peps" id="update_ex_peps"
+                                    autocomplete="given-name" wire:model="update_ex_peps"
                                     class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                             </div>
                         </div>
