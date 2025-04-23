@@ -261,6 +261,21 @@
                                     autocomplete="given-name" readonly value="{{ $import->ex_peps_upgrade }}"
                                     class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                             </div>
+                            <div class="col-span-6 sm:col-span-3">
+                                <label for="new_ipr" class="block text-sm font-medium text-gray-700">Nuevo
+                                    IPR</label>
+                                <input type="text" name="new_ipr" id="new_ipr"
+                                    autocomplete="given-name" readonly value="{{ $import->ipr_new }}"
+                                    class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                            </div>
+                            <div class="col-span-6 sm:col-span-3">
+                                <label for="update_ipr"
+                                    class="block text-sm font-medium text-gray-700">Actualización
+                                    IPR</label>
+                                <input type="text" name="update_ipr" id="update_ipr"
+                                    autocomplete="given-name" readonly value="{{ $import->ipr_upgrade }}"
+                                    class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                            </div>
                         </div>
                         @if ($import->description)
                             <div class="col-span-6 mt-5">

@@ -271,6 +271,21 @@
                                     autocomplete="given-name" wire:model="update_ex_peps"
                                     class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                             </div>
+                            <div class="col-span-6 sm:col-span-3">
+                                <label for="new_ipr" class="block text-sm font-medium text-gray-700">Nuevo
+                                    IPR</label>
+                                <input type="number" name="new_ipr" id="new_ipr"
+                                    autocomplete="given-name" wire:model="new_ipr"
+                                    class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                            </div>
+                            <div class="col-span-6 sm:col-span-3">
+                                <label for="update_ipr"
+                                    class="block text-sm font-medium text-gray-700">Actualización
+                                    IPR</label>
+                                <input type="number" name="update_ipr" id="update_ipr"
+                                    autocomplete="given-name" wire:model="update_ipr"
+                                    class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                            </div>
                         </div>
                         <div class="col-span-6 mt-5">
                             <label for="about" class="block text-sm font-medium text-gray-700">

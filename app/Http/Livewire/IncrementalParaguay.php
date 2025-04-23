@@ -31,6 +31,7 @@ class IncrementalParaguay extends Component
         $new_europol, $update_europol,
         $new_canadienses, $update_canadienses,
         $new_ex_peps, $update_ex_peps,
+        $new_ipr, $update_ipr,
         $description_one;
 
     public function render()
@@ -88,6 +89,8 @@ class IncrementalParaguay extends Component
             'canadienses_upgrade' => $this->update_canadienses,
             'ex_peps_new' => $this->new_ex_peps,
             'ex_peps_upgrade' => $this->update_ex_peps,
+            'ipr_new' => $this->new_ipr,
+            'ipr_upgrade' => $this->update_ipr,
             'description' => $this->description_one
         ]);
     }
