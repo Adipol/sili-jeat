@@ -1,6 +1,6 @@
-<div x-data="{ open: false }">
+<div>
     @foreach ($imports as $import)
-        <article class="mb-6 card">
+    <article wire:ignore.self x-data="{ open: false }" class="mb-6 overflow-hidden bg-white rounded-lg shadow">
             <div class="card-body bh-gray-100">
                 <header class="flex items-center justify-between text-sm">
                     <h1 x-on:click="open=!open" class="cursor-pointer"> <i class="far fa-calendar-alt"></i>
