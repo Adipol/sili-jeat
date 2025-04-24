@@ -126,26 +126,26 @@
                 <div class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
                     <div class="overflow-hidden border-b border-gray-200 shadow sm:rounded-lg">
                         <table class="min-w-full divide-y divide-gray-200">
-                            <thead class="bg-gray-50">
+                            <thead class="bg-blue-900">
                                 <tr>
                                     <th scope="col"
-                                        class="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase">
+                                        class="px-6 py-3 text-xs font-medium tracking-wider text-left text-white uppercase">
                                         Fecha de registro
                                     </th>
                                     <th scope="col"
-                                        class="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase">
+                                        class="px-6 py-3 text-xs font-medium tracking-wider text-left text-white uppercase">
                                         Fecha de carga
                                     </th>
                                     <th scope="col"
-                                        class="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase">
+                                        class="px-6 py-3 text-xs font-medium tracking-wider text-left text-white uppercase">
                                         Detalle de carga
                                     </th>
 
                                 </tr>
                             </thead>
                             <tbody class="bg-white divide-y divide-gray-200">
-                                @foreach ($expenses as $expense)
-                                    <tr>
+                                @foreach ($expenses as $index => $expense)
+                                <tr class="@if($index % 2 === 0) bg-blue-50 @endif hover:bg-blue-100 transition-colors duration-200">
                                         <td class="px-6 py-4 text-sm text-gray-500 whitespace-nowrap">
                                             {{ $expense->updated_at->isoFormat('lll') }}
                                         </td>
