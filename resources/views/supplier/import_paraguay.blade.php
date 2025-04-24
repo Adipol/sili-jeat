@@ -2,8 +2,7 @@
 <x-import-layout>
     <div class="px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
         @if (Session::has('success'))
-            <div class="flex items-center block h-12 p-4 my-3 text-sm text-left text-white bg-green-500 rounded-md "
-                role="alert">
+        <div class="flex items-center h-12 p-4 my-3 text-sm text-left text-white bg-green-500 rounded-md" role="alert">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                     class="w-6 h-6 mx-2 stroke-current">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"

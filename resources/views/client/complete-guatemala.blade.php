@@ -44,7 +44,7 @@
                                 </thead>
                                 <tbody class="bg-white divide-y divide-gray-200">
                                     @foreach ($codes as $index => $code)
-                                    <tr class="@if($index % 2 === 0) bg-blue-50 @else bg-blue-100 @endif">
+                                        <tr class="{{ $index % 2 == 0 ? 'bg-blue-50' : 'bg-blue-100' }}">
                                             <td class="text-sm text-gray-900 font-small">
                                                 <div class="ml-4">
                                                     {{ $code->code }}
