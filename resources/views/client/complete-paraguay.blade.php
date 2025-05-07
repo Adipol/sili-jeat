@@ -14,9 +14,9 @@
         <div class="text-sm card-body bg-gray-100">
             <header class="flex items-center justify-between">
                 <h1> <i class="far fa-calendar-alt"></i>
-                    <strong>Fecha de carga: </strong>
+                    <strong>Fecha de actualización: </strong>
                     @if ($complete)
-                        {{ $complete->date->isoFormat('ll') }}
+                        {{ $complete->date->isoFormat('D [de] MMMM [de] YYYY')}}
                     @endif
                 </h1>
             </header>

@@ -1,20 +1,37 @@
 <div>
     @foreach ($imports as $import)
-    <article wire:ignore.self x-data="{ open: false }" class="mb-6 overflow-hidden bg-white rounded-lg shadow">
+    <article x-data="{ open: false }"
+    class="mb-6 overflow-hidden transition-all duration-200 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md">
             <div class="card-body bh-gray-100">
-                <header class="flex items-center justify-between text-sm">
-                    <h1 x-on:click="open=!open" class="cursor-pointer"> <i class="far fa-calendar-alt"></i>
-                        <strong>Fecha:
-                        </strong> {{ $import->description_beginning->isoFormat('ll') }}
-                        <strong>al </strong>{{ $import->description_final->isoFormat('ll') }}
-                    </h1>
-                    <div>
-                        <strong>Cargado:
-                        </strong> {{ $import->created_at->diffForHumans() }}
+                <header class="flex items-center justify-between p-4 bg-gradient-to-r from-blue-50 to-gray-50 border-b cursor-pointer group" x-on:click="open=!open">
+                    <div class="flex items-center space-x-4">
+                        <!-- Icono dinámico con animación -->
+                        <div class="p-2 text-blue-600 transition-all duration-200 bg-white rounded-full shadow-sm group-hover:bg-blue-100">
+                            <i class="far fa-calendar-alt" :class="{'rotate-45': open}"></i>
+                        </div>
+                        <div>
+                            <h2 class="font-bold text-gray-800">Período</h2>
+                            <div class="flex items-center mt-1 space-x-3">
+                                <span class="text-sm text-gray-500">
+                                    {{ $import->description_beginning->isoFormat('D [de] MMMM') }} al
+                                    {{ $import->description_final->isoFormat('D [de] MMMM [de] YYYY') }}
+                                </span>
+                            </div>
+                            {{--       <div>                                    <span class="px-2 py-1 text-xs font-medium text-blue-800 bg-blue-100 rounded-full">
+                                Cargado: {{ $import->created_at->diffForHumans() }}
+                        </span>
+                    </div> --}}
+
+                        </div>
                     </div>
+                    <!-- Flecha animada -->
+                    <i
+                    class="fas fa-chevron-down text-gray-400 transition-transform duration-300 transform"
+                    :class="{ 'rotate-180': open }"
+                  ></i>
                 </header>
 
-                <div x-show="open">
+                <div x-show="open" x-transition.opacity.duration.300ms class="px-4 py-5 bg-gray-50 sm:p-6">
                     <div class="px-4 py-5 bg-white sm:p-6">
                         <div class="grid grid-cols-6 gap-6">
                             <div class="col-span-6 sm:col-span-3">
@@ -292,15 +309,19 @@
                     </div>
                 </div>
 
-                <div class="flex items-center justify-end mt-2">
-                    {{-- <button class="mt-4 mr-2 btn btn-green" wire:click="download_xlsx({{ $import->id }})"><i
-                            class="fa fa-download"></i>
-                        Descarga
-                        XLSX</button> --}}
-                    <button class="mt-4 mr-2 btn btn-green" wire:click="download_csv({{ $import->id }})"><i
-                            class="fa fa-download"></i>
-                        Descarga CSV
-                    </button>
+                <div class="flex justify-end p-4 bg-gray-50 border-t">
+                    <button
+                    wire:click="download_csv({{ $import->id }})"
+                    @click="if(!confirm('¿Descargar archivo CSV?')) return false"
+                    class="flex items-center px-4 py-2 space-x-2 text-sm text-white bg-green-600 rounded-lg hover:bg-green-700 active:scale-95 transition-all"
+                >
+                    <i class="fa fa-download"></i>
+                    <span>Descarga CSV</span>
+                    <span wire:loading wire:target="download_csv({{ $import->id }})" class="ml-2">
+                        <i class="animate-spin fas fa-spinner"></i>
+
+                    </span>
+                </button>
                 </div>
             </div>
         </article>

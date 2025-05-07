@@ -18,7 +18,16 @@
     <div class="flex items-center justify-end mt-2">
         {{-- <button class="mt-4 mr-2 btn btn-green" wire:click="download_xlsx"><i class="fa fa-download"></i> Descarga
             XLSX</button> --}}
-        <button class="mt-4 mr-2 btn btn-green" wire:click="download_csv"><i class="fa fa-download"></i> Descarga CSV
+            <button
+            wire:click="download_csv"
+            @click="if(!confirm('¿Descargar archivo CSV?')) return false"
+            class="flex items-center px-4 py-2 space-x-2 text-sm text-white bg-green-600 rounded-lg hover:bg-green-700 active:scale-95 transition-all"
+        >
+            <i class="fa fa-download"></i>
+            <span>Descarga CSV</span>
+            <span wire:loading wire:target="download_csv" class="ml-2">
+                <i class="animate-spin fas fa-spinner"></i>
+            </span>
         </button>
     </div>
     <livewire:scripts />
