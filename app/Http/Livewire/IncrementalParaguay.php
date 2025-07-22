@@ -33,6 +33,7 @@ class IncrementalParaguay extends Component
         $new_ex_peps, $update_ex_peps,
         $new_ipr, $update_ipr,
         $new_dea, $update_dea,
+        $new_upa, $update_upa,
         $description_one;
 
     public function render()
@@ -94,6 +95,8 @@ class IncrementalParaguay extends Component
             'ipr_upgrade' => $this->update_ipr,
             'dea_new' => $this->new_dea,
             'dea_upgrade' => $this->update_dea,
+            'upa_new' => $this->new_upa,
+            'upa_upgrade' => $this->update_upa,
             'description' => $this->description_one
         ]);
     }

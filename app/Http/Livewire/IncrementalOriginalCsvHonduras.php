@@ -57,6 +57,8 @@ class IncrementalOriginalCsvHonduras extends Component
         'control.ipr_upgrade' => 'required',
         'control.dea_new' => 'required',
         'control.dea_upgrade' => 'required',
+        'control.upa_new' => 'required',
+        'control.upa_upgrade' => 'required',
         'control.description' => 'required'
     ];
     public function mount(HondurasImport $control)

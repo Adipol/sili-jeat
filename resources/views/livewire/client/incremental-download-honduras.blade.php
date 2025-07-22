@@ -307,6 +307,20 @@
                                     readonly value="{{ $import->dea_upgrade }}"
                                     class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
                             </div>
+                            <div class="col-span-6 sm:col-span-3">
+                                <label for="new_upa" class="block text-sm font-medium text-gray-700">Nuevo
+                                    UPA</label>
+                                <input type="text" name="new_upa" id="new_upa" autocomplete="given-name"
+                                    readonly value="{{ $import->upa_new }}"
+                                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                            </div>
+                            <div class="col-span-6 sm:col-span-3">
+                                <label for="update_upa" class="block text-sm font-medium text-gray-700">Actualización
+                                    UPA </label>
+                                <input type="text" name="update_upa" id="update_upa" autocomplete="given-name"
+                                    readonly value="{{ $import->upa_upgrade }}"
+                                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                            </div>
                         </div>
                         @if ($import->description)
                             <div class="col-span-6 mt-5">
@@ -322,22 +336,18 @@
                         @endif
                     </div>
                 </div>
-
                 <div class="flex justify-end border-t bg-gray-50 p-4">
-                    <button wire:click="download_csv({{ $import->id }})"
-                        @click="if(!confirm('¿Descargar archivo CSV?')) return false"
+                    <button
+                        @click="if(confirm('¿Descargar archivo CSV?')) { $wire.download_csv({{ $import->id }}) }"
                         class="flex items-center space-x-2 rounded-lg bg-green-600 px-4 py-2 text-sm text-white transition-all hover:bg-green-700 active:scale-95">
                         <i class="fa fa-download"></i>
                         <span>Descarga CSV</span>
                         <span wire:loading wire:target="download_csv({{ $import->id }})" class="ml-2">
                             <i class="fas fa-spinner animate-spin"></i>
-
                         </span>
                     </button>
                 </div>
-
             </div>
-
         </article>
     @endforeach
 </div>

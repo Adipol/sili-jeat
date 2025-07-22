@@ -15,7 +15,7 @@ class AllDownload extends Component
 {
     public $download_all;
 
-    public $code = ['ASO-PEP', 'FBI', 'F-PEP', 'GAFI', 'INTERPOL', 'OFAC', 'ONU', 'OPI', 'PEP-EX', 'PEP-NAL', 'PEPU-EX', 'PEPU-NAL', 'UE', 'PF-UE', 'ENGEL', 'UK', 'EUROPOL', 'CANADIENSES', 'EXP', 'IPR', 'DEA'];
+    public $code = ['ASO-PEP', 'FBI', 'F-PEP', 'GAFI', 'INTERPOL', 'OFAC', 'ONU', 'OPI', 'PEP-EX', 'PEP-NAL', 'PEPU-EX', 'PEPU-NAL', 'UE', 'PF-UE', 'ENGEL', 'UK', 'EUROPOL', 'CANADIENSES', 'EXP', 'IPR', 'DEA', 'UPA'];
     public $colors = [
         'ASO-PEP' => '#6a5bcdb8',
         'FBI' => '#708090',
@@ -37,7 +37,8 @@ class AllDownload extends Component
         'CANADIENSES' => '#FF69B4',
         'EXP' => '#00FFFF',
         'IPR' => '#FFD700',
-        'DEA' => '#9D00FF'
+        'DEA' => '#9D00FF',
+        'UPA' => '#1e90ff'
     ];
 
     public $firstRun = true;

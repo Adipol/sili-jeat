@@ -224,6 +224,16 @@
                     <x-jet-input wire:model="control.dea_upgrade" type="text" class="block w-full" readonly />
                 </div>
             </div>
+            <div class="mb-4 grid grid-cols-6 gap-6">
+                <div class="col-span-6 sm:col-span-3">
+                    <x-jet-label value="Nuevo UPA" />
+                    <x-jet-input wire:model="control.upa_new" type="text" class="block w-full" readonly />
+                </div>
+                <div class="col-span-6 sm:col-span-3">
+                    <x-jet-label value="Actualización UPA" />
+                    <x-jet-input wire:model="control.upa_upgrade" type="text" class="block w-full" readonly />
+                </div>
+            </div>
             <div class="col-span-6 mb-4 mt-5">
                 <label for="about" class="block text-sm font-medium text-gray-700">
                     Observaciones
