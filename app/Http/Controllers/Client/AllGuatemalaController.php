@@ -10,9 +10,9 @@ class AllGuatemalaController extends Controller
 {
     public function show($id)
     {
-        $pep = DB::table('control_guatemala')->where('id_pep', $id)->first();
+        $pep = DB::table('control_guatemala')->where('id_pep', $id)->whereNull('id_all')->first();
         $all = DB::table('control_guatemala')->where('id_pep', $id)
-            ->where('type_pep', 'ALL')->get();
+            ->whereNotNull('id_all')->get();
 
         return view('client.all.show-guatemala', compact('pep', 'all'));
     }
