@@ -158,14 +158,12 @@
                         </li>
                     @endcan
 
-                    {{-- @can('Cargar otros') --}}
-                    {{-- <li
-                            class="pl-2 mb-1 leading-7 border-l-4  @routeIs('supplier.other.index')border-yellow-500
-@else
-border-transparent @endif">
-                            <a href="{{ route('supplier.other.index') }}">Dividir listas</a>
-                        </li> --}}
-                    {{-- @endcan --}}
+                    @can('Cargar otros')
+                        <li
+                            class="@routeIs('supplier.other.index')border-yellow-500 @else @endif mb-1 border-l-4 border-transparent pl-2 leading-7">
+                            <a href="{{ route('supplier.other.index') }}">Cargar códigos</a>
+                        </li>
+                    @endcan
                 </ul>
             </aside>
             <div class="card col-span-4">
