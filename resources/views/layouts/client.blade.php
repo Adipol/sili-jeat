@@ -35,98 +35,98 @@
 
                     @can('Descargar incremental')
                         <li
-                            class="@routeIs('incremental.index') @else @endif mb-1 border-l-4 border-transparent border-yellow-500 bg-yellow-50 pl-2 font-bold leading-7 text-gray-600 text-yellow-500 hover:bg-yellow-50 hover:text-yellow-500">
+                            class="@if (Route::is('incremental.index')) text-yellow-500 bg-yellow-50 @endif mb-1 border-l-4 border-transparent border-yellow-500 pl-2 font-bold leading-7 text-gray-600 hover:bg-yellow-50 hover:text-yellow-500">
                             <a href="{{ route('incremental.index') }}" class="block">Incremental</a>
                         </li>
                     @endcan
 
                     @can('Descargar incremental honduras')
                         <li
-                            class="@routeIs('incremental.honduras.index') @else @endif mb-1 border-l-4 border-transparent border-yellow-500 bg-yellow-50 pl-2 font-bold leading-7 text-gray-600 text-yellow-500 hover:bg-yellow-50 hover:text-yellow-500">
+                            class="@if (Route::is('incremental.honduras.index')) text-yellow-500 bg-yellow-50 @endif mb-1 border-l-4 border-transparent border-yellow-500 pl-2 font-bold leading-7 text-gray-600 hover:bg-yellow-50 hover:text-yellow-500">
                             <a href="{{ route('incremental.honduras.index') }}" class="block">Incremental (Honduras)</a>
                         </li>
                     @endcan
 
                     @can('Descargar incremental el salvador')
                         <li
-                            class="@routeIs('incremental.salvador.index') @else @endif mb-1 border-l-4 border-transparent border-yellow-500 bg-yellow-50 pl-2 font-bold leading-7 text-gray-600 text-yellow-500 hover:bg-yellow-50 hover:text-yellow-500">
+                            class="@if (Route::is('incremental.salvador.index')) text-yellow-500 bg-yellow-50 @endif mb-1 border-l-4 border-transparent border-yellow-500 pl-2 font-bold leading-7 text-gray-600 hover:bg-yellow-50 hover:text-yellow-500">
                             <a href="{{ route('incremental.salvador.index') }}" class="block">Incremental (El Salvador)</a>
                         </li>
                     @endcan
 
                     @can('Descargar incremental paraguay')
                         <li
-                            class="@routeIs('incremental.paraguay.index') @else @endif mb-1 border-l-4 border-transparent border-yellow-500 bg-yellow-50 pl-2 font-bold leading-7 text-gray-600 text-yellow-500 hover:bg-yellow-50 hover:text-yellow-500">
+                            class="@if (Route::is('incremental.paraguay.index')) text-yellow-500 bg-yellow-50 @endif mb-1 border-l-4 border-transparent border-yellow-500 pl-2 font-bold leading-7 text-gray-600 hover:bg-yellow-50 hover:text-yellow-500">
                             <a href="{{ route('incremental.paraguay.index') }}" class="block">Incremental (Paraguay)</a>
                         </li>
                     @endcan
 
                     @can('Descargar incremental guatemala')
                         <li
-                            class="@routeIs('incremental.guatemala.index') @else @endif mb-1 border-l-4 border-transparent border-yellow-500 bg-yellow-50 pl-2 font-bold leading-7 text-gray-600 text-yellow-500 hover:bg-yellow-50 hover:text-yellow-500">
+                            class="@if (Route::is('incremental.guatemala.index')) text-yellow-500 bg-yellow-50 @endif mb-1 border-l-4 border-transparent border-yellow-500 pl-2 font-bold leading-7 text-gray-600 hover:bg-yellow-50 hover:text-yellow-500">
                             <a href="{{ route('incremental.guatemala.index') }}" class="block">Incremental (Guatemala)</a>
                         </li>
                     @endcan
 
                     @can('Descargar incremental nicaragua')
                         <li
-                            class="@routeIs('incremental.nicaragua.index') @else @endif mb-1 border-l-4 border-transparent border-yellow-500 bg-yellow-50 pl-2 font-bold leading-7 text-gray-600 text-yellow-500 hover:bg-yellow-50 hover:text-yellow-500">
+                            class="@if (Route::is('incremental.nicaragua.index')) text-yellow-500 bg-yellow-50 @endif mb-1 border-l-4 border-transparent border-yellow-500 pl-2 font-bold leading-7 text-gray-600 hover:bg-yellow-50 hover:text-yellow-500">
                             <a href="{{ route('incremental.nicaragua.index') }}" class="block">Incremental (Nicaragua)</a>
                         </li>
                     @endcan
 
                     @can('Descargar completa')
                         <li
-                            class="@routeIs('complete.index') @else @endif mb-1 border-l-4 border-transparent border-yellow-500 bg-yellow-50 pl-2 font-bold leading-7 text-gray-600 text-yellow-500 hover:bg-yellow-50 hover:text-yellow-500">
+                            class="@if (Route::is('complete.index')) text-yellow-500 bg-yellow-50 @endif mb-1 border-l-4 border-transparent border-yellow-500 pl-2 font-bold leading-7 text-gray-600 hover:bg-yellow-50 hover:text-yellow-500">
                             <a href="{{ route('complete.index') }}" class="block">Completa</a>
                         </li>
                     @endcan
 
                     @can('Descargar completa honduras')
                         <li
-                            class="@routeIs('complete.honduras.index') @else @endif mb-1 border-l-4 border-transparent border-yellow-500 bg-yellow-50 pl-2 font-bold leading-7 text-gray-600 text-yellow-500 hover:bg-yellow-50 hover:text-yellow-500">
+                            class="@if (Route::is('complete.honduras.index')) text-yellow-500 bg-yellow-50 @endif mb-1 border-l-4 border-transparent border-yellow-500 pl-2 font-bold leading-7 text-gray-600 hover:bg-yellow-50 hover:text-yellow-500">
                             <a href="{{ route('complete.honduras.index') }}" class="block">Completa (Honduras)</a>
                         </li>
                     @endcan
 
                     @can('Descargar completa el salvador')
                         <li
-                            class="@routeIs('complete.salvador.index') @else @endif mb-1 border-l-4 border-transparent border-yellow-500 bg-yellow-50 pl-2 font-bold leading-7 text-gray-600 text-yellow-500 hover:bg-yellow-50 hover:text-yellow-500">
+                            class="@if (Route::is('complete.salvador.index')) text-yellow-500 bg-yellow-50 @endif mb-1 border-l-4 border-transparent border-yellow-500 pl-2 font-bold leading-7 text-gray-600 hover:bg-yellow-50 hover:text-yellow-500">
                             <a href="{{ route('complete.salvador.index') }}" class="block">Completa (El Salvador)</a>
                         </li>
                     @endcan
 
                     @can('Descargar completa paraguay')
                         <li
-                            class="@routeIs('complete.paraguay.index') @else @endif mb-1 border-l-4 border-transparent border-yellow-500 bg-yellow-50 pl-2 font-bold leading-7 text-gray-600 text-yellow-500 hover:bg-yellow-50 hover:text-yellow-500">
-                            <a href="{{ route('complete.paraguay.index') }}" class="block">Completa (Paraguay)</a>
+                            class="@if (Route::is('complete.paraguay.index')) text-yellow-500 bg-yellow-50 @endif mb-1 border-l-4 border-transparent border-yellow-500 pl-2 font-bold leading-7 text-gray-600 hover:bg-yellow-50 hover:text-yellow-500">
+                            <a href="{{ route('complete.paraguay.index') }}" class="block">Completa (Paraguay))</a>
                         </li>
                     @endcan
 
                     @can('Descargar completa guatemala')
                         <li
-                            class="@routeIs('complete.guatemala.index') @else @endif mb-1 border-l-4 border-transparent border-yellow-500 bg-yellow-50 pl-2 font-bold leading-7 text-gray-600 text-yellow-500 hover:bg-yellow-50 hover:text-yellow-500">
-                            <a href="{{ route('complete.guatemala.index') }}" class="block">Completa (Guatemala)</a>
+                            class="@if (Route::is('complete.guatemala.index')) text-yellow-500 bg-yellow-50 @endif mb-1 border-l-4 border-transparent border-yellow-500 pl-2 font-bold leading-7 text-gray-600 hover:bg-yellow-50 hover:text-yellow-500">
+                            <a href="{{ route('complete.guatemala.index') }}" class="block">Completa (Guatemala))</a>
                         </li>
                     @endcan
 
                     @can('Descargar completa nicaragua')
                         <li
-                            class="@routeIs('complete.nicaragua.index') @else @endif mb-1 border-l-4 border-transparent border-yellow-500 bg-yellow-50 pl-2 font-bold leading-7 text-gray-600 text-yellow-500 hover:bg-yellow-50 hover:text-yellow-500">
-                            <a href="{{ route('complete.nicaragua.index') }}" class="block">Completa (Nicaragua)</a>
+                            class="@if (Route::is('complete.nicaragua.index')) text-yellow-500 bg-yellow-50 @endif mb-1 border-l-4 border-transparent border-yellow-500 pl-2 font-bold leading-7 text-gray-600 hover:bg-yellow-50 hover:text-yellow-500">
+                            <a href="{{ route('complete.nicaragua.index') }}" class="block">Completa (Nicaragua))</a>
                         </li>
                     @endcan
 
                     @can('Descargar gafi')
                         <li
-                            class="@routeIs('gafi.index') @else @endif mb-1 border-l-4 border-transparent border-yellow-500 bg-yellow-50 pl-2 font-bold leading-7 text-gray-600 text-yellow-500 hover:bg-yellow-50 hover:text-yellow-500">
+                            class="@if (Route::is('gafi.index')) text-yellow-500 bg-yellow-50 @endif mb-1 border-l-4 border-transparent border-yellow-500 pl-2 font-bold leading-7 text-gray-600 hover:bg-yellow-50 hover:text-yellow-500">
                             <a href="{{ route('gafi.index') }}" class="block">Paraísos Fiscales (GAFI)</a>
                         </li>
                     @endcan
 
                     @can('Descargar ue')
                         <li
-                            class="@routeIs('ue.index') @else @endif mb-1 border-l-4 border-transparent border-yellow-500 bg-yellow-50 pl-2 font-bold leading-7 text-gray-600 text-yellow-500 hover:bg-yellow-50 hover:text-yellow-500">
+                            class="@if (Route::is('ue.index')) text-yellow-500 bg-yellow-50 @endif mb-1 border-l-4 border-transparent border-yellow-500 pl-2 font-bold leading-7 text-gray-600 hover:bg-yellow-50 hover:text-yellow-500">
                             <a href="{{ route('ue.index') }}" class="block">Paraísos Fiscales (UE)</a>
                         </li>
                     @endcan
