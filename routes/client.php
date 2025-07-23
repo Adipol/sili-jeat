@@ -1,24 +1,27 @@
 <?php
 
 
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Client\AllController;
 use App\Http\Controllers\Client\AllGuatemalaController;
-use App\Http\Controllers\Client\CompleteController;
 use App\Http\Controllers\Client\AllHondurasController;
+use App\Http\Controllers\Client\AllNicaraguaController;
 use App\Http\Controllers\Client\AllParaguayController;
 use App\Http\Controllers\Client\AllSalvadorController;
+use App\Http\Controllers\Client\CompleteController;
 use App\Http\Controllers\Client\CompleteGuatemalaController;
-use App\Http\Controllers\Client\IncrementalController;
 use App\Http\Controllers\Client\CompleteHondurasController;
+use App\Http\Controllers\Client\CompleteNicaraguaController;
 use App\Http\Controllers\Client\CompleteParaguayController;
 use App\Http\Controllers\Client\CompleteSalvadorController;
 use App\Http\Controllers\Client\GafiController;
+use App\Http\Controllers\Client\IncrementalController;
 use App\Http\Controllers\Client\IncrementalGuatemalaController;
 use App\Http\Controllers\Client\IncrementalHondurasController;
+use App\Http\Controllers\Client\IncrementalNicaraguaController;
 use App\Http\Controllers\Client\IncrementalParaguayController;
 use App\Http\Controllers\Client\IncrementalSalvadorController;
 use App\Http\Controllers\Client\UeController;
+use Illuminate\Support\Facades\Route;
 
 //Route::get('client', [IncrementalController::class, 'index'])->name('client.index');
 
@@ -61,3 +64,10 @@ Route::get('gafi', [GafiController::class, 'index'])->middleware('can:Descargar 
 
 //Listas UE
 Route::get('ue', [UeController::class, 'index'])->name('ue.index');
+
+//Nicaragua
+Route::get('incremental-nicaragua', [IncrementalNicaraguaController::class, 'index'])->middleware('can:Descargar incremental nicaragua')->name('incremental.nicaragua.index');
+
+Route::get('complete-nicaragua', [CompleteNicaraguaController::class, 'index'])->middleware('can:Descargar completa nicaragua')->name('complete.nicaragua.index');
+
+Route::get('all-nicaragua/{id}', [AllNicaraguaController::class, 'show'])->name('all.nicaragua.show');

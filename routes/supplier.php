@@ -1,27 +1,31 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AllController;
 use App\Http\Controllers\AllGuatemalaController;
 use App\Http\Controllers\AllHondurasController;
+use App\Http\Controllers\AllNicaraguaController;
 use App\Http\Controllers\AllParaguayController;
 use App\Http\Controllers\AllSalvadorController;
-use App\Http\Controllers\Supplier\OtherController;
-use App\Http\Controllers\Supplier\ImportController;
 use App\Http\Controllers\Supplier\ConsultController;
 use App\Http\Controllers\Supplier\ConsultGuatemalaController;
-use App\Http\Controllers\Supplier\IncrementalController;
-use App\Http\Controllers\Supplier\ImportHondurasController;
-use App\Http\Controllers\Supplier\ImportParaguayController;
-use App\Http\Controllers\Supplier\ImportSalvadorController;
 use App\Http\Controllers\Supplier\ConsultHondurasController;
+use App\Http\Controllers\Supplier\ConsultNicaraguaController;
 use App\Http\Controllers\Supplier\ConsultParaguayController;
 use App\Http\Controllers\Supplier\ConsultSalvadorController;
+use App\Http\Controllers\Supplier\ImportController;
 use App\Http\Controllers\Supplier\ImportGuatemalaController;
+use App\Http\Controllers\Supplier\ImportHondurasController;
+use App\Http\Controllers\Supplier\ImportNicaraguaController;
+use App\Http\Controllers\Supplier\ImportParaguayController;
+use App\Http\Controllers\Supplier\ImportSalvadorController;
+use App\Http\Controllers\Supplier\IncrementalController;
 use App\Http\Controllers\Supplier\IncrementalGuatemalaController;
 use App\Http\Controllers\Supplier\IncrementalHondurasController;
+use App\Http\Controllers\Supplier\IncrementalNicaraguaController;
 use App\Http\Controllers\Supplier\IncrementalParaguayController;
 use App\Http\Controllers\Supplier\IncrementalSalvadorController;
+use App\Http\Controllers\Supplier\OtherController;
+use Illuminate\Support\Facades\Route;
 
 
 
@@ -85,3 +89,15 @@ Route::get('incremental-guatemala', [IncrementalGuatemalaController::class, 'ind
 Route::get('guatemala-all', [AllGuatemalaController::class, 'index'])->middleware('can:Cargar completa guatemala')->name('supplier.guatemala.all.index');
 
 Route::get('consults-guatemala', [ConsultGuatemalaController::class, 'index'])->name('consults.guatemala.index');
+
+//Para Guatemala
+
+Route::get('import-nicaragua', [ImportNicaraguaController::class, 'index'])->middleware('can:Importar bd nicaragua')->name('import.nicaragua.index');
+
+Route::post('importNicaraguaExcel', [ImportNicaraguaController::class, 'importExcel'])->name('importExcel.nicaragua');
+
+Route::get('incremental-nicaragua', [IncrementalNicaraguaController::class, 'index'])->middleware('can:Cargar incremental nicaragua')->name('supplier.incremental.nicaragua.index');
+
+Route::get('nicaragua-all', [AllNicaraguaController::class, 'index'])->middleware('can:Cargar completa nicaragua')->name('supplier.nicaragua.all.index');
+
+Route::get('consults-nicaragua', [ConsultNicaraguaController::class, 'index'])->name('consults.nicaragua.index');

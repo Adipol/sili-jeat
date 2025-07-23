@@ -12,9 +12,9 @@ class AllegadoPdfSalvadorController extends Controller
 {
     public function downloadPDF($id)
     {
-        $pep = DB::table('control_salvador')->where('id_pep', $id)->first();
+        $pep = DB::table('control_salvador')->where('id_pep', $id)->whereNotNull('id_all')->get();
         $all = DB::table('control_salvador')->where('id_pep', $id)
-            ->where('type_pep', 'ALL')->get();
+            ->whereNotNull('id_all')->get();
 
         $date = Carbon::now();
 
