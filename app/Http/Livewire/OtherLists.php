@@ -24,9 +24,14 @@ class OtherLists extends Component
 
     public function save_lists()
     {
+        $this->validate();
         //$this->validate(['text' => 'required']);
         if ($this->file) {
-            Storage::delete($this->other->link_lists);
+            // Elimina el archivo antiguo si existe
+            if ($this->other->link_lists) {
+                Storage::delete($this->other->link_lists);
+            }
+            // Guarda el nuevo archivo en 'storage/app/resources/'
             $this->other->link_lists = $this->file->store('resources');
         }
 

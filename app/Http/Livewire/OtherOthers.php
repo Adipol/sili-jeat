@@ -24,9 +24,15 @@ class OtherOthers extends Component
 
     public function save_others()
     {
+        $this->validate();
         //$this->validate(['text' => 'required']);
+
         if ($this->file) {
-            Storage::delete($this->other->link_others);
+            // Elimina el archivo antiguo si existe
+            if ($this->other->link_others) {
+                Storage::delete($this->other->link_others);
+            }
+            // Guarda el nuevo archivo en 'storage/app/resources/'
             $this->other->link_others = $this->file->store('resources');
         }
 

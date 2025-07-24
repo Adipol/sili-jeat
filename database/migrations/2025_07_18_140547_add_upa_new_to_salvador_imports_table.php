@@ -26,7 +26,7 @@ class AddUpaNewToSalvadorImportsTable extends Migration
     public function down()
     {
         Schema::table('salvador_imports', function (Blueprint $table) {
-            //
+            $table->dropColumn('upa_new');
         });
     }
 }
