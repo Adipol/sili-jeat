@@ -18,6 +18,7 @@ class UserController extends Controller
         $this->middleware('can:Leer usuarios')->only('index');
         // $this->middleware('can:Crear usuarios')->only('create', 'store');
         $this->middleware('can:Editar usuarios')->only('edit', 'update');
+        $this->middleware('can:Eliminar usuarios')->only('destroy');
     }
 
     /**
@@ -92,8 +93,18 @@ class UserController extends Controller
     public function edit(User $user)
     {
         $roles = Role::all();
+        $entities = Entity::all();
+        // Lista de zonas horarias disponibles
+        $timezones = [
+            'America/La_Paz' => 'America/La_Paz (Bolivia)',
+            'America/Tegucigalpa' => 'America/Tegucigalpa (Honduras)',
+            'America/El_Salvador' => 'America/El_Salvador (El Salvador)',
+            'America/Managua' => 'America/Managua (Nicaragua)',
+            'America/Asuncion' => 'America/Asuncion (Paraguay)',
+            'America/Guatemala' => 'America/Guatemala (Guatemala)',
+        ];
 
-        return view('admin.users.edit', compact('user', 'roles'));
+        return view('admin.users.edit', compact('user', 'roles', 'entities', 'timezones'));
     }
 
     /**
@@ -105,9 +116,25 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|max:255|unique:users,email,' . $user->id,
+            'entity_id' => 'required|exists:entities,id',
+            'timezone' => 'nullable|string',
+            'roles' => 'nullable|array',
+            'roles.*' => 'exists:roles,id'
+        ]);
+
+        // Actualizar nombre y correo
+        $user->update([
+            'name' => $request->name,
+            'email' => $request->email,
+            'entity_id' => $request->entity_id,
+            'timezone' => $request->timezone
+        ]);
         $user->roles()->sync($request->roles);
 
-        return redirect()->route('admin.users.edit', $user);
+        return redirect()->route('admin.users.edit', $user)->with('info', 'Usuario actualizado correctamente');
     }
 
     /**
@@ -118,6 +145,15 @@ class UserController extends Controller
      */
     public function destroy(User $user)
     {
-        //
+        // Verificar que no sea el usuario autenticado
+        if ($user->id == auth()->id()) {
+            return redirect()->route('admin.users.index')
+                ->with('error', 'No puedes eliminar tu propio usuario');
+        }
+
+        $user->delete();
+
+        return redirect()->route('admin.users.index')
+            ->with('info', 'El usuario se eliminó correctamente');
     }
 }
