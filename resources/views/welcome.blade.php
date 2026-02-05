@@ -116,7 +116,7 @@
         <div class="bg-gray-100">
             <div class="container mx-auto flex flex-col flex-wrap px-5 py-4 sm:flex-row">
                 <p class="text-center text-sm text-gray-500 sm:text-left">
-                    © 2024 v4.0 Copyright:
+                    © 2024 v4.1 Copyright:
                     <a href="mailto:jorge.aguilar@grupoamlc.org" class="ml-1 text-gray-600" target="_blank">Powered by
                         AMLC
                     </a>
