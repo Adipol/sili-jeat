@@ -7,3 +7,26 @@ routes.php
 routes.scanned.php
 schedule-*
 services.json
+
+
+# SSL Certificates
+public/.well-known/
+
+# Laravel Excel temporales
+storage/framework/laravel-excel/
+
+# Backups SQL (CRÍTICO - SEGURIDAD)
+*.sql
+*.sql.gz
+*.sql.zip
+*.dump
+
+# Archivos de debug (SEGURIDAD)
+public/info.php
+public/phpinfo.php
+
+# Node modules y vendor
+/node_modules
+/vendor
+.env
+.env.backup
